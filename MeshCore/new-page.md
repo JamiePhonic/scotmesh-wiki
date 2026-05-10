@@ -2,7 +2,7 @@
 title: Regions and the Companion app
 description: Wiki describing the changes in the companion app
 published: true
-date: 2026-04-28T19:59:20.685Z
+date: 2026-05-10T01:23:47.806Z
 tags: meshcore, regions, scotland, meshcore_app
 editor: markdown
 dateCreated: 2026-04-28T19:59:20.685Z
