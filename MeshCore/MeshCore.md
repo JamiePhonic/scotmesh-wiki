@@ -18,7 +18,7 @@ For ScotMesh, that means local, regional, and Scotland-wide communication can ke
 
 > The ScotMesh MeshCore network no longer accepts wildcard `*` traffic.
 >
-> If you use the MeshCore Companion App on our network, set your default region to `sco` under **Experimental Settings** and keep **`ioi`** available in your scope list for **Island of Ireland / IOI peering** traffic when you need it. MeshCore calls this setting the **default scope region**. It helps ensure your messages are scoped for Scotland instead of relying on wildcard forwarding. Repeater-side detail: [Regions](regions) (IOI peering agreement).
+> If you use the MeshCore Companion App on our network, set your default region to `sco` under **Experimental Settings**. MeshCore calls this setting the **default scope region**. It helps ensure your messages are scoped for Scotland instead of relying on wildcard forwarding. Repeater-side detail: [Regions](regions) (IOI peering agreement).
 >
 > For more background, see the MeshCore blog post [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope).
 {.is-warning}
