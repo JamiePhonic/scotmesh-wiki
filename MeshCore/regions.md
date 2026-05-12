@@ -21,7 +21,7 @@ MeshCore messages can travel through repeaters. That is useful, but if every rep
 Regions help us:
 
 1. **Keep local traffic local**  
-   A message about Fife does not always need to be repeated across every part of Scotland.
+   A message that only matters in one area does not always need to be repeated across every part of Scotland.
 
 2. **Reduce unnecessary radio traffic**  
    LoRa is slow compared with Wi-Fi or mobile data, so every avoidable repeat uses valuable airtime.
@@ -41,8 +41,8 @@ There are two related concepts: **regions** and **scopes**.
 
 | Term | Meaning | Example |
 |---|---|---|
-| **Region** | A code configured on a repeater to describe the area it serves. | A Fife repeater includes `fif`. |
-| **Scope** | A code applied to messages or channels to describe where the traffic is intended to travel. | The `#fife` channel uses `fif`. |
+| **Region** | A code configured on a repeater to describe the area it serves. | An Edinburgh-area repeater includes `edi`. |
+| **Scope** | A code applied to messages or channels to describe where the traffic is intended to travel. | The `#glasgow` channel might use `gla` when traffic should stay in that area. |
 {.dense}
 
 A repeater should only carry scoped traffic for regions it genuinely serves.
@@ -168,7 +168,7 @@ ioi
 In plain English:
 
 - `sco` is for Scotland-wide traffic.
-- `cen`, `fif`, and `tay` are wider Scottish regions.
+- `tay`, `cen`, and `fif` are wider Scottish regions.
 - `fal`, `edi`, `gla`, `dun`, and `per` are local areas.
 - `ioi` is for the Island of Ireland under the IOI peering agreement.
 
@@ -292,34 +292,34 @@ region denyf *
 region save
 ```
 
-For a Fife repeater:
+For a Glasgow-area repeater:
 
 ```text
 region put sco *
 region put ioi *
-region put fif sco
+region put gla sco
 
 region allowf sco
 region allowf ioi
-region allowf fif
+region allowf gla
 
 region denyf *
 
 region save
 ```
 
-For a repeater that serves Scotland, Central Scotland, Fife, Edinburgh, and IOI peering (`ioi`):
+For a repeater that serves Scotland, Central Scotland, Glasgow, Edinburgh, and IOI peering (`ioi`):
 
 ```text
 region put sco *
 region put cen sco
-region put fif sco
+region put gla cen
 region put edi cen
 region put ioi *
 
 region allowf sco
 region allowf cen
-region allowf fif
+region allowf gla
 region allowf edi
 region allowf ioi
 
@@ -357,7 +357,7 @@ Channel: #scotland
 Scope:   sco
 ```
 
-For local traffic, pick a channel and set **scope** to the local code for that area (see [Channels](channels) for examples such as `#fife` with `fif`). For **`#ireland`**, set **`ioi` or `sco`** depending on the path you want (see [Scopes](scopes)); for example:
+For local traffic, pick a channel and set **scope** to the local code for that area (see [Channels](channels) for examples such as `#edinburgh` with `edi`). For **`#ireland`**, set **`ioi` or `sco`** depending on the path you want (see [Scopes](scopes)); for example:
 
 ```text
 Channel: #ireland
@@ -429,7 +429,7 @@ Our agreed approach is:
 - Use three-letter lowercase codes.
 - Use `sco` for Scotland.
 - Add `ioi` wherever the Scottish baseline `sco` is configured (IOI peering).
-- Use `cen`, `tay`, and `fif` for major regions.
+- Use `cen`, `tay`, `gla`, and `fif` for major regions where they match coverage.
 - Use `fal`, `edi`, `gla`, `dun`, and `per` for local areas.
 - Use `ioi` for Island of Ireland traffic under the IOI peering agreement.
 - Deny wildcard forwarding with `region denyf *`.

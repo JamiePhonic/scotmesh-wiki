@@ -29,12 +29,12 @@ MeshCore uses a few terms that are worth understanding before changing settings.
 
 | Term | Meaning |
 |---|---|
-| **Channel** | A named place for conversation, such as `#scotland`, `#fife`, or `#ireland`. |
-| **Scope** | The region code applied to messages in a channel, such as `sco`, `fif`, or `ioi`. |
+| **Channel** | A named place for conversation, such as `#scotland`, `#glasgow`, or `#ireland`. |
+| **Scope** | The region code applied to messages in a channel, such as `sco`, `gla`, or `ioi`. |
 | **Region** | A code configured on a repeater to describe the area it serves. |
 | **Repeater** | A fixed node that hears MeshCore traffic and repeats it to extend coverage. |
 
-A channel name alone does not control where traffic travels. The important routing detail is the **scope**. For example, the `#fife` channel should use the `fif` scope for Fife-local traffic, while **`#ireland`** may use **`ioi` or `sco`** depending on whether you want the Island of Ireland scoped path or Scotland-wide scoped carriage (see [Scopes](scopes)).
+A channel name alone does not control where traffic travels. The important routing detail is the **scope**. For example, the `#glasgow` channel should use the `gla` scope when traffic should stay in the Glasgow area, while **`#ireland`** may use **`ioi` or `sco`** depending on whether you want the Island of Ireland scoped path or Scotland-wide scoped carriage (see [Scopes](scopes)).
 
 ## Scottish MeshCore guidance
 

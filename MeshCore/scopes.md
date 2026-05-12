@@ -15,7 +15,7 @@ dateCreated: 2026-04-28T19:59:20.685Z
 
 This guide is for MeshCore Companion App users in Scotland. **Scope** is what repeaters use to decide whether to forward a message; the channel name is mainly for humans. In normal use, set your **default** scope to `sco`, then set **per-channel** scope when you need something narrower (or different).
 
-> **ScotMesh setup:** Under **Experimental Settings**, set the default scope region to `sco`, and keep `ioi` available in your scope list as well so you can pick it when you need it. For each channel, set scope to match **where the traffic should travel**—for example `#fife` with `fif`. On **`#ireland`**, you may use **`ioi` or `sco`**: use `ioi` when the message should ride the Island of Ireland scoped path (IOI peering); use `sco` when you want the same channel but Scotland-wide scoped carriage on the mesh.
+> **ScotMesh setup:** Under **Experimental Settings**, set the default scope region to `sco`, and keep `ioi` available in your scope list as well so you can pick it when you need it. For each channel, set scope to match **where the traffic should travel**—for example `#edinburgh` with `edi`. On **`#ireland`**, you may use **`ioi` or `sco`**: use `ioi` when the message should ride the Island of Ireland scoped path (IOI peering); use `sco` when you want the same channel but Scotland-wide scoped carriage on the mesh.
 {.is-info}
 
 ## Why scope matters
@@ -36,7 +36,7 @@ In MeshCore, a message can carry a **region scope**. That code tells repeaters w
 
 ```text
 sco = Scotland-wide
-fif = Fife (example local)
+edi = Edinburgh area (example local)
 ioi = Island of Ireland (IOI peering)
 ```
 
@@ -57,7 +57,7 @@ Do not set scope to * for forwarding
 Use a real region code instead
 ```
 
-In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `fif`, `ioi`, and so on)—not `*` for forwarding. On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in [Regions](regions).
+In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `gla`, `ioi`, and so on)—not `*` for forwarding. On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in [Regions](regions).
 
 ## Documented scope codes
 
@@ -95,7 +95,7 @@ In the mobile app this is usually under **Experimental Settings**. Flood packets
 
 **Per-channel scope overrides the default.** Examples:
 
-- `#fife` with `fif` keeps traffic in the Fife-shaped part of the mesh.
+- `#glasgow` with `gla` keeps traffic in the Glasgow-area part of the mesh.
 - **`#ireland` with `ioi`** — message is scoped for the Island of Ireland path (IOI peering repeaters).
 - **`#ireland` with `sco`** — same channel name, but the packet is Scotland-wide scoped; repeaters treat it like other `sco` traffic. Use when that matches how you want the message to move (for example mainly Scottish-side repeaters, or you are experimenting).
 
@@ -114,7 +114,7 @@ Menus vary by app version and platform; the usual flow is:
 6. Send with that scope active
 ```
 
-Often the channel menu includes something like **Set Region Scope**, then you pick or type the code (for example `sco`, `fif`, or `ioi`).
+Often the channel menu includes something like **Set Region Scope**, then you pick or type the code (for example `sco`, `edi`, or `ioi`).
 
 More on region filtering: [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering).
 
@@ -130,8 +130,8 @@ Scope:   sco
 **Local (example)**
 
 ```text
-Channel: #fife
-Scope:   fif
+Channel: #glasgow
+Scope:   gla
 ```
 
 **`#ireland` with Island of Ireland scope**
@@ -164,9 +164,9 @@ Scope:   none / blank / wildcard forwarding
 ## Quick choices
 
 - Normal Scottish chat: default `sco`, or `#scotland` with `sco`.
-- Local-only: local scope such as `fif` when traffic should stay local.
+- Local-only: local scope such as `edi` or `gla` when traffic should stay in that area.
 - **`#ireland`:** `ioi` for IOI-scoped path, **`sco`** when you want Scotland-wide scoped carriage on that channel.
-- Tests: `#test` with whichever scope you are testing (`fif`, `sco`, …).
+- Tests: `#test` with whichever scope you are testing (`tay`, `sco`, …).
 
 If you are unsure, **`sco`** is the safe general default for Scottish-side traffic.
 

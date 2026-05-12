@@ -21,8 +21,8 @@ A channel name and a region scope are related, but they are not the same thing.
 For example:
 
 ```text
-Channel: #fife
-Scope:   fif
+Channel: #edinburgh
+Scope:   edi
 ```
 
 The channel name is what users see. The scope is what helps the mesh carry the message through the right repeaters.
@@ -51,7 +51,7 @@ The following table lists known community channels and proposed channels for Sco
 | `#glasgow` | Local | `gla` | Proposed | Glasgow area traffic. |
 | `#perth` | Local | `per` | Proposed | Perth area traffic. |
 | `#tayside` | Local | `tay` | Proposed | Tayside traffic. |
-| `#test` | Other | Set the scope being tested | Current | Test messages. Use `sco`, `fif`, `edi`, or another scope that matches what you are testing. |
+| `#test` | Other | Set the scope being tested | Current | Test messages. Use `sco`, `edi`, `gla`, or another scope that matches what you are testing. |
 | `#scotham` | Other | `sco` | Proposed | Scotland-wide amateur radio, UHF, and related coordination. |
 {.dense}
 
@@ -63,7 +63,7 @@ Use the **narrowest scope** that still fits what you are sending; channel names 
 
 ```text
 #scotland / sco          Scotland-wide mesh (example name)
-#fife / fif              Local area (same scope idea for #edinburgh/edi, #glasgow/gla, …)
+#edinburgh / edi         Local area (same scope idea for #glasgow/gla, #fife/fif, #dundee/dun, …)
 #test / <scope>          Pick the scope you are actually testing
 #ireland / ioi or sco    Island of Ireland channel (pick scope for the path you want)
 #norniron / ioi         Northern Ireland (example)
