@@ -114,7 +114,8 @@ Confirm the node shows on [meshcore.mayomesh.net](https://meshcore.mayomesh.net/
 ## MayoMesh live map
 
 - **Who runs it:** MayoMesh (the map and `mqtt.mayomesh.net` broker) is operated by **County Mayo**, **Ireland**. ScotMesh uses that community’s infrastructure for the shared observer map.
-- **Live map:** [https://meshcore.mayomesh.net/](https://meshcore.mayomesh.net/) (MQTT over WebSocket, for example `wss://mqtt.mayomesh.net`, as shown on the site).
+- **LetsMesh Analyzer:** [packet view filtered to `EDI`, `DND`, `DUB`, `BHD`, `GLA`](https://analyzer.letsmesh.net/packets?region=EDI,DND,DUB,BHD,GLA).
+- **MayoMesh live map:** [meshcore.mayomesh.net](https://meshcore.mayomesh.net/) — MQTT over WebSocket (for example `wss://mqtt.mayomesh.net`, as shown on the site).
 - **Broker commands** for your repeater are in [Observer setup](#observer-setup) under **MQTT (MayoMesh on slot 1)**.
 - **Self-hosting the map UI:** based on [yellowcooln/meshcore-mqtt-live-map](https://github.com/yellowcooln/meshcore-mqtt-live-map); point your instance at MayoMesh’s broker instead of default LetsMesh-style endpoints.
 
