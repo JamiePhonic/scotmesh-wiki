@@ -42,6 +42,7 @@ The following table lists known community channels and proposed channels for Sco
 | `#test` | Set the scope being tested | Current | Test messages. Use `sco`, `fif`, `edi`, or another agreed scope depending on what you are testing. |
 | `#central` | `cen` | Proposed | Central Scotland traffic. |
 | `#fife` | `fif` | Current | Fife area traffic. |
+| `#glenrothes` | `fif` | Proposed | Glenrothes area traffic, scoped through Fife. |
 | `#tayside` | `tay` | Proposed | Tayside traffic. |
 | `#glasgow` | `gla` | Proposed | Glasgow area traffic. |
 | `#edinburgh` | `edi` | Proposed | Edinburgh area traffic. |
