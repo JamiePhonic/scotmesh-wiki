@@ -77,6 +77,8 @@ set repeat off
 
 ### MQTT (MayoMesh on slot 1)
 
+**MayoMesh** (the public live map and `mqtt.mayomesh.net` broker) is **run by County Mayo** in **Ireland**. ScotMesh uses it as the shared map feed for Scottish observers.
+
 Observer builds usually ship with **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2**. For ScotMesh’s public map you want **MayoMesh** on slot 1. **Apply this whenever `get mqtt1.preset` is not already your MayoMesh custom setup**—including after a merged flash **and** after a non-merged upgrade from stock observer images.
 
 ```text
@@ -113,7 +115,8 @@ Confirm the node shows on [meshcore.mayomesh.net](https://meshcore.mayomesh.net/
 
 ## MayoMesh live map
 
-- Live map: [https://meshcore.mayomesh.net/](https://meshcore.mayomesh.net/) (MQTT over WebSocket, for example `wss://mqtt.mayomesh.net`, as shown on the site).
+- **Who runs it:** MayoMesh (the map and `mqtt.mayomesh.net` broker) is operated by **County Mayo**, **Ireland**. ScotMesh uses that community’s infrastructure for the shared observer map.
+- **Live map:** [https://meshcore.mayomesh.net/](https://meshcore.mayomesh.net/) (MQTT over WebSocket, for example `wss://mqtt.mayomesh.net`, as shown on the site).
 - **Broker commands** for your repeater are in [Observer setup](#observer-setup) under **MQTT (MayoMesh on slot 1)**.
 - **Self-hosting the map UI:** based on [yellowcooln/meshcore-mqtt-live-map](https://github.com/yellowcooln/meshcore-mqtt-live-map); point your instance at MayoMesh’s broker instead of default LetsMesh-style endpoints.
 
@@ -128,7 +131,7 @@ These control **which of this node’s transmitted packets** are sent upstream o
 | `set mqtt.tx off` | No TX uplink over MQTT. |
 
 ```text
-set mqtt.tx advert
+set mqtt.tx on
 ```
 
 Use **`on`** only when you mean to export the full TX stream.
