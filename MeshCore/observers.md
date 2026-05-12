@@ -24,7 +24,7 @@ Pick the file that matches your **exact board** (Heltec, LilyGo, RAK, Station G2
 
 **`*_merged.bin` vs the non-merged `.bin`**
 
-- **Files ending in `_merged.bin`** are a **full** image (bootloader, partition table, and application). Flashing one **normally wipes** stored repeater settings (**NVS**): Wi‑Fi, MQTT slots, name, keys, and similar. Use merged when you **need** that full layout refresh—for example the **first** move to observer firmware on a board, or when the observer build’s **partition table** is new for that hardware (see “Partition Table Changes” in [MQTT_IMPLEMENTATION.md](https://github.com/agessaman/MeshCore/blob/mqtt-bridge-implementation-flex/MQTT_IMPLEMENTATION.md)).
+- **Files ending in `_merged.bin`** are a **full** image (bootloader, partition table, and application). Flashing one **normally wipes** stored repeater settings (**NVS**, Non-Volatile Storage: flash-backed preferences on ESP32-class boards, including Wi‑Fi, MQTT slots, name, keys, and similar). Use merged when you **need** that full layout refresh—for example the **first** move to observer firmware on a board, or when the observer build’s **partition table** is new for that hardware (see “Partition Table Changes” in [MQTT_IMPLEMENTATION.md](https://github.com/agessaman/MeshCore/blob/mqtt-bridge-implementation-flex/MQTT_IMPLEMENTATION.md)).
 - **Files without `_merged` in the name** update the **app** only when the **partition layout is unchanged**. That path is what you want when you **already run observer firmware** on that board and you want to **keep** your current configuration through an upgrade.
 
 After a merged flash, **re-enter** RF settings, node name, Wi‑Fi, MQTT, `mqtt.iata`, and other stored values. After a non-merged upgrade on the same layout, settings are **usually** kept—still read release notes. Later updates can use **OTA** ([`start ota`](#updates-without-usb-start-ota)) or a non-merged binary when appropriate.
@@ -42,7 +42,7 @@ Use your build’s normal OTA workflow (browser or tool) once the device is adve
 ## Observer setup
 
 1. **Flash** the `*repeater_observer_mqtt*` file for your board ([Firmware](#firmware) explains **`_merged.bin`** vs non-merged).
-2. **If NVS was wiped** (typical after **`_merged.bin`**), work through **Wi‑Fi** → **`mqtt.iata`** → (optional **receive-only**) → **MQTT** in order. **RF and node identity** (frequency, bandwidth, SF, CR, TX power, name) must match your mesh before the node is useful on air—set them in the **device web UI** or admin screens, or via serial using your coordinator’s values; repeater region planning is in [Regions](regions). **If you used a non-merged** update and kept settings, use `get` and only redo what is wrong—but **still check MQTT**: stock images often leave **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2** until you repoint them (for example MayoMesh on slot 1).
+2. **If NVS was wiped** (typical after **`_merged.bin`**; **NVS** is *Non-Volatile Storage*—flash-backed settings such as Wi‑Fi, MQTT, and radio prefs), set **RF and node identity** first: frequency, bandwidth, SF, CR, TX power, and **name** must match your mesh before the node is useful on air. Use the **device web UI** or admin screens, or serial, using your coordinator’s values; repeater planning is in [Regions](regions). **Then** work through **Wi‑Fi** → **`mqtt.iata`** → (optional **receive-only**) → **MQTT** in order below. **If you used a non-merged** update and kept settings, use `get` and only redo what is wrong—but **still check MQTT**: stock images often leave **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2** until you repoint them (for example MayoMesh on slot 1).
 
 ### Wi‑Fi
 
@@ -77,9 +77,7 @@ set repeat off
 
 ### MQTT (MayoMesh on slot 1)
 
-**MayoMesh** (the public live map and `mqtt.mayomesh.net` broker) is **run by County Mayo** in **Ireland**. ScotMesh uses it as the shared map feed for Scottish observers.
-
-Observer builds usually ship with **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2**. For ScotMesh’s public map you want **MayoMesh** on slot 1. **Apply this whenever `get mqtt1.preset` is not already your MayoMesh custom setup**—including after a merged flash **and** after a non-merged upgrade from stock observer images.
+ScotMesh uses **MayoMesh** for the shared observer map and broker (who runs it and links: [MayoMesh live map](#mayomesh-live-map)). Observer builds usually ship with **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2**. Point **slot 1** at MayoMesh for our map. **Apply this whenever `get mqtt1.preset` is not already your MayoMesh custom setup**—including after a merged flash **and** after a non-merged upgrade from stock observer images.
 
 ```text
 set mqtt1.preset custom
@@ -130,11 +128,19 @@ These control **which of this node’s transmitted packets** are sent upstream o
 | `set mqtt.tx on` | Uplink **all TX** from this node. Richer feed, more bandwidth and airtime. |
 | `set mqtt.tx off` | No TX uplink over MQTT. |
 
+For most map feeds, **`advert`** is enough:
+
+```text
+set mqtt.tx advert
+```
+
+If you need every TX packet this node sends mirrored upstream:
+
 ```text
 set mqtt.tx on
 ```
 
-Use **`on`** only when you mean to export the full TX stream.
+Use **`on`** only when you intend that heavier feed (more bandwidth and airtime).
 
 ## Safety
 

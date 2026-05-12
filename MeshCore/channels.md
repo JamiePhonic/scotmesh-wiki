@@ -79,4 +79,4 @@ Use the **narrowest scope** that still fits what you are sending; channel names 
 - New public channel names tend to land better when discussed with the community first.
 - Checking the Companion App scope before sending helps avoid misrouted messages.
 
-For more detail on setting scope in the Companion App, see [Scopes](scopes). For repeater and region code guidance, see [Regions](regions).
+For more detail on setting scope in the Companion App, see [Scopes](scopes). For repeater and region code guidance, see [Regions](regions). For **MQTT observers** and map uplink, see [Observers](observers).

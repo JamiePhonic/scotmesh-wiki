@@ -18,7 +18,7 @@ For ScotMesh, that means local, regional, and Scotland-wide communication can ke
 
 > The ScotMesh MeshCore network no longer accepts wildcard `*` traffic.
 >
-> If you use the MeshCore Companion App on our network, set your default region to `sco` under **Experimental Settings** and make sure `ioi` is also available for the Ireland interconnect. MeshCore calls this setting the **default scope region**. It helps ensure your messages are scoped for Scotland instead of relying on wildcard forwarding.
+> If you use the MeshCore Companion App on our network, set your default region to `sco` under **Experimental Settings** and keep **`ioi`** available in your scope list for **Island of Ireland / IOI peering** traffic when you need it. MeshCore calls this setting the **default scope region**. It helps ensure your messages are scoped for Scotland instead of relying on wildcard forwarding. Repeater-side detail: [Regions](regions) (IOI peering agreement).
 >
 > For more background, see the MeshCore blog post [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope).
 {.is-warning}
@@ -41,6 +41,8 @@ A channel name alone does not control where traffic travels. The important routi
 The Scottish MeshCore network uses deliberate region-based routing. Messages should be sent with a **scope** that matches where they need to travel, and wildcard forwarding is not allowed in the Scottish setup.
 
 ## Start here
+
+Suggested order if you are new: [Scopes](scopes) (how to set scope and avoid “shouting into the void”) → [Channels](channels) (example names and scopes) → [Regions](regions) if you run or plan repeaters → [Observers](observers) if you uplink to the live map.
 
 - [Channels](channels) lists example and proposed MeshCore channels with typical scopes.
 - [Regions](regions) explains the Scottish region code scheme and repeater guidance.

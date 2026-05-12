@@ -57,6 +57,8 @@ Do not set scope to * for forwarding
 Use a real region code instead
 ```
 
+In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `fif`, `ioi`, and so on)—not `*` for forwarding. On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in [Regions](regions).
+
 ## Documented scope codes
 
 | Scope | Typical use |

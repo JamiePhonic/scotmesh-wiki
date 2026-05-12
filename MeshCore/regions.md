@@ -76,7 +76,7 @@ Set scope to match where the traffic should travel
 Send the message
 ```
 
-For Companion App guidance, see [Scopes](scopes). For channel names and suggested scopes, see [Channels](channels).
+For Companion App guidance, see [Scopes](scopes). For channel names and suggested scopes, see [Channels](channels). For **MQTT observer** setup and uplink to the live map, see [Observers](observers).
 
 ## Scottish region code approach
 
