@@ -10,42 +10,37 @@ dateCreated: 2026-04-28T19:59:20.685Z
 
 # MeshCore Scopes
 
-This guide explains how MeshCore Companion App users in Scotland should choose and set **region scope**.
-
-The short version is: set your default scope to `sco`, then use a more specific channel scope when you need one.
-
-> If you are using the ScotMesh MeshCore network, set your Companion App default scope region to `sco` under **Experimental Settings** and make sure `ioi` is also available for the Ireland interconnect.
->
-> Channel-specific scope still matters. A channel such as `#fife` should use `fif`, and `#ireland` should use `ioi`.
+> **Scotland:** If you do not have a suitable **scope** set, repeaters on the Scottish MeshCore network may not forward your traffic. You can end up **shouting into the void**. Check your default scope and each channel’s scope before you count on messages reaching anyone.
 {.is-warning}
 
-The Scotland regional framework gives repeaters a structured way to carry the right traffic. Companion App users help that system work by sending messages with the correct scope.
+This guide is for MeshCore Companion App users in Scotland. **Scope** is what repeaters use to decide whether to forward a message; the channel name is mainly for humans. In normal use, set your **default** scope to `sco`, then set **per-channel** scope when you need something narrower (or different).
 
-The aim is simple:
+> **ScotMesh setup:** Under **Experimental Settings**, set the default scope region to `sco`, and keep `ioi` available in your scope list as well so you can pick it when you need it. For each channel, set scope to match **where the traffic should travel**—for example `#fife` with `fif`. On **`#ireland`**, you may use **`ioi` or `sco`**: use `ioi` when the message should ride the Island of Ireland scoped path (IOI peering); use `sco` when you want the same channel but Scotland-wide scoped carriage on the mesh.
+{.is-info}
+
+## Why scope matters
+
+The Scotland regional framework gives repeaters a structured way to carry the right traffic. Companion App users help that work by choosing scope deliberately.
 
 - Keep Scottish traffic inside Scotland where appropriate.
-- Allow controlled traffic to neighbouring regions such as Ireland / Island of Ireland.
+- Allow controlled traffic to and from the Island of Ireland (IOI peering).
 - Reduce unnecessary flooding.
 - Avoid unscoped traffic.
-- Make the network more scalable as MeshCore use grows.
+- Keep the network easier to grow.
 
-For the channel list, see [Channels](channels). For repeater region guidance, see [Regions](regions).
+For example channel names and typical scopes, see [Channels](channels). For repeater region codes, see [Regions](regions).
 
 ## What region scope means
 
-In MeshCore, a message can be given a **region scope**. The scope tells repeaters which region that message is intended for.
-
-For example:
+In MeshCore, a message can carry a **region scope**. That code tells repeaters which region the traffic is intended for.
 
 ```text
-sco = Scotland
-fif = Fife
-ioi = Ireland / Island of Ireland interconnect
+sco = Scotland-wide
+fif = Fife (example local)
+ioi = Island of Ireland (IOI peering)
 ```
 
-If a message is scoped to `sco`, it should be carried by repeaters that support the `sco` region. If a message is scoped to `ioi`, it should be carried by repeaters that support the `ioi` interconnect.
-
-If no scope is set, the message is not following the Scottish MeshCore guidance and may not travel as expected.
+A message scoped to `sco` is forwarded by repeaters that carry `sco`. A message scoped to `ioi` is forwarded by repeaters that carry `ioi`. If scope is missing or wrong for your path, the message may go nowhere useful.
 
 ## Wildcard forwarding is not allowed
 
@@ -55,202 +50,140 @@ The wildcard marker is:
 *
 ```
 
-Do not rely on it for message routing. The Scottish MeshCore setup does not allow wildcard forwarding for normal use.
-
-In simple terms:
+Do not rely on wildcard **forwarding** for routing. The Scottish MeshCore setup expects explicit region scopes for normal use.
 
 ```text
-Do not set scope to *
-Use the correct region scope instead
+Do not set scope to * for forwarding
+Use a real region code instead
 ```
 
-## Recommended scopes
+## Documented scope codes
 
-The currently documented scopes are:
-
-| Scope | Use |
+| Scope | Typical use |
 |---|---|
-| `sco` | General Scotland-wide traffic |
-| `cen` | Central Scotland traffic |
-| `fif` | Fife traffic |
-| `tay` | Tayside traffic |
-| `gla` | Glasgow area traffic |
-| `edi` | Edinburgh area traffic |
-| `fal` | Falkirk area traffic |
-| `per` | Perth area traffic |
-| `dun` | Dundee area traffic |
-| `ioi` | Ireland / Island of Ireland interconnect traffic |
+| `sco` | Scotland-wide traffic |
+| `cen` | Central Scotland |
+| `fif` | Fife |
+| `tay` | Tayside |
+| `gla` | Glasgow area |
+| `edi` | Edinburgh area |
+| `fal` | Falkirk area |
+| `per` | Perth area |
+| `dun` | Dundee area |
+| `ioi` | Island of Ireland / IOI peering |
 {.dense}
 
-For most users in Scotland, normal day-to-day traffic should use:
+For most day-to-day traffic in Scotland, **`sco`** is the right default. Use a **local** code when traffic should stay in that area, regardless of channel name.
 
-```text
-sco
-```
-
-Also add or keep `ioi` available so that the `#ireland` channel can be scoped correctly when you need the interconnect.
-
-For local area channels, use the relevant local code where that channel has been agreed locally.
-
-For Ireland-facing traffic, use:
-
-```text
-ioi
-```
-
-Do not use the older combined name:
+Do not use the old combined name:
 
 ```text
 ioi-sco
 ```
 
-## Default scope region
+## Default scope and per-channel scope
 
-Companion App users on the ScotMesh MeshCore network should set their default scope region to:
+On ScotMesh, set your **default** scope region to:
 
 ```text
 sco
 ```
 
-In the mobile app this is usually found under **Experimental Settings** as the default scope region name. When set, flood packets sent by the companion are scoped to that region unless a group channel has its own scope set.
+In the mobile app this is usually under **Experimental Settings**. Flood packets from the companion then use `sco` unless a **group channel** has its own scope.
 
-Group channel scope still matters. If a channel has a specific scope, that channel scope should override the default. For example, `#fife` should use `fif`, while the general fallback for Scottish use should be `sco`. Keep `ioi` available wherever you add `sco`, so `#ireland` can use the `ioi` scope when needed.
+**Per-channel scope overrides the default.** Examples:
 
-For the upstream explanation, see [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope).
+- `#fife` with `fif` keeps traffic in the Fife-shaped part of the mesh.
+- **`#ireland` with `ioi`** — message is scoped for the Island of Ireland path (IOI peering repeaters).
+- **`#ireland` with `sco`** — same channel name, but the packet is Scotland-wide scoped; repeaters treat it like other `sco` traffic. Use when that matches how you want the message to move (for example mainly Scottish-side repeaters, or you are experimenting).
 
-## How to set a region scope in the Companion App
+Keep both `sco` and `ioi` in your available scopes so you can switch. For background, see MeshCore [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope).
 
-The exact menu wording may vary depending on app version and platform, but the general process is:
+## How to set region scope in the Companion App
+
+Menus vary by app version and platform; the usual flow is:
 
 ```text
 1. Open the MeshCore Companion App
 2. Open the channel you want to use
 3. Open the channel options or channel menu
-4. Look for the region scope option
-5. Select or add the required region code
-6. Send your message with that region scope active
+4. Find the region scope option
+5. Select or add the region code you need
+6. Send with that scope active
 ```
 
-Some app versions allow region scope to be set from inside the channel screen. In many cases this is done by opening the channel menu and selecting:
+Often the channel menu includes something like **Set Region Scope**, then you pick or type the code (for example `sco`, `fif`, or `ioi`).
 
-```text
-Set Region Scope
-```
+More on region filtering: [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering).
 
-Then choose or add the region you want to use.
+## Examples
 
-Example:
-
-```text
-Set Region Scope -> sco
-```
-
-Once the channel is scoped, messages sent in that channel should use that region.
-
-MeshCore's region filtering background is explained in [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering).
-
-## Example: normal Scotland message
-
-If you are in Scotland and want to send a normal public or regional message within Scotland, use:
+**Scotland-wide**
 
 ```text
 Channel: #scotland
 Scope:   sco
-Message: Morning all, testing from Falkirk area.
 ```
 
-This tells the network that the message is intended for Scotland.
-
-## Example: Fife message
-
-If you are sending traffic intended for Fife, use:
+**Local (example)**
 
 ```text
 Channel: #fife
 Scope:   fif
-Message: Test from Fife.
 ```
 
-## Example: sending to Ireland / Island of Ireland
-
-If you are in Scotland but want to send a message into the Ireland / Island of Ireland region, use:
-
-```text
-Channel: #ireland
-Scope:   ioi
-Message: Test from Scotland into ioi region.
-```
-
-This is important. Do not leave the message unscoped and hope that other repeaters will carry it.
-
-The correct behaviour is:
-
-```text
-Use #ireland with region scope ioi
-```
-
-## Channel name versus message scope
-
-The channel name alone is not enough.
-
-For example, being inside a channel called:
-
-```text
-#ireland
-```
-
-does not automatically guarantee that the message is scoped correctly. The message still needs the correct region scope:
+**`#ireland` with Island of Ireland scope**
 
 ```text
 Channel: #ireland
 Scope:   ioi
 ```
 
-Not:
+**`#ireland` with Scotland-wide scope**
 
 ```text
 Channel: #ireland
-Scope:   none / blank / wildcard
+Scope:   sco
 ```
 
-## What scope should I use day to day?
+The channel name does not set scope by itself—you still choose `ioi` or `sco` (or another code) in the channel settings.
 
-For most users in Scotland:
+## Channel name versus scope
+
+Being in a channel called `#ireland` does **not** automatically set scope. You must set **`ioi` or `sco`** (or another deliberate code) for that channel so repeaters see the intent you want.
+
+Wrong:
 
 ```text
-Use sco for normal Scottish traffic
+Channel: #ireland
+Scope:   none / blank / wildcard forwarding
 ```
 
-Use local region codes only where there is a clear reason to keep the traffic more local. As of May 2026, the Scottish MeshCore network is still small, so local-only traffic may not be needed often.
+## Quick choices
 
-For testing, use `#test` with the scope you are testing. For example, use `#test` with `fif` for a Fife test, or `#test` with `sco` for a Scotland-wide test.
+- Normal Scottish chat: default `sco`, or `#scotland` with `sco`.
+- Local-only: local scope such as `fif` when traffic should stay local.
+- **`#ireland`:** `ioi` for IOI-scoped path, **`sco`** when you want Scotland-wide scoped carriage on that channel.
+- Tests: `#test` with whichever scope you are testing (`fif`, `sco`, …).
 
-If you are unsure, use:
-
-```text
-sco
-```
+If you are unsure, **`sco`** is the safe general default for Scottish-side traffic.
 
 ## What to avoid
 
-Please avoid:
-
 - Sending important traffic with no region scope.
 - Relying on wildcard forwarding.
-- Assuming that a channel name alone controls where the message goes.
-- Using old or incorrect region names such as `ioi-sco`.
+- Assuming the channel name alone chooses routing.
+- Using `ioi-sco`.
 
-## Final summary
-
-For Companion App users, the key points are:
+## Summary
 
 ```text
-Use sco for normal Scottish traffic
-Use ioi for Ireland / Island of Ireland traffic
-Use local codes only where appropriate
-Do not set scope to *
-Do not use ioi-sco
-Make sure the channel has the correct region scope before sending
+Default: sco on ScotMesh
+Override per channel when needed
+#ireland: ioi OR sco — pick the path you mean
+Local: use the local code when traffic should stay local
+Never: scope * for forwarding, or ioi-sco
+Check scope before you send
 ```
 
-Getting this right now will help Scotland build a cleaner, more reliable, and more scalable MeshCore network.
+Getting scope right keeps the mesh predictable and easier to grow.

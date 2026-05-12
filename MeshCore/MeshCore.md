@@ -34,19 +34,20 @@ MeshCore uses a few terms that are worth understanding before changing settings.
 | **Region** | A code configured on a repeater to describe the area it serves. |
 | **Repeater** | A fixed node that hears MeshCore traffic and repeats it to extend coverage. |
 
-A channel name alone does not control where traffic travels. The important routing detail is the **scope**. For example, the `#fife` channel should use the `fif` scope, while the `#ireland` interconnect should use the `ioi` scope.
+A channel name alone does not control where traffic travels. The important routing detail is the **scope**. For example, the `#fife` channel should use the `fif` scope for Fife-local traffic, while **`#ireland`** may use **`ioi` or `sco`** depending on whether you want the Island of Ireland scoped path or Scotland-wide scoped carriage (see [Scopes](scopes)).
 
 ## Scottish MeshCore guidance
 
-The Scottish MeshCore network uses deliberate region-based routing. Messages should be sent with an agreed scope, and wildcard forwarding is not allowed in the Scottish setup.
+The Scottish MeshCore network uses deliberate region-based routing. Messages should be sent with a **scope** that matches where they need to travel, and wildcard forwarding is not allowed in the Scottish setup.
 
 ## Start here
 
-- [Channels](channels) explains the agreed and proposed MeshCore channels.
+- [Channels](channels) lists example and proposed MeshCore channels with typical scopes.
 - [Regions](regions) explains the Scottish region code scheme and repeater guidance.
 - [Scopes](scopes) explains how Companion App users should choose and set region scope.
+- [Observers](observers) explains MQTT observer setup on repeaters (MayoMesh, firmware, `mqtt.iata`, TX uplink modes).
 
-For normal Scotland-wide traffic, use the `#scotland` channel with the `sco` scope. For local channels, use the agreed local scope. For the Ireland interconnect, use `#ireland` with the `ioi` scope.
+For normal Scotland-wide traffic, many people use the `#scotland` channel with the `sco` scope. For local traffic, set **scope** to the code that matches the area, whatever channel name you use. For **`#ireland`**, use **`ioi` or `sco`** as described in [Scopes](scopes); `#norniron` is commonly used with `ioi`.
 
 ## Useful MeshCore background
 
