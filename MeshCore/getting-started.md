@@ -12,6 +12,9 @@ dateCreated: 2026-05-18T22:28:00.000Z
 
 Welcome. This page is for people who are brand new to ScotMesh and MeshCore. You do not need to know anything about radio or networking to follow this guide.
 
+> This guide is written for **companion node** devices — small LoRa radios that pair with the MeshCore Companion App on your phone. More capable standalone devices do exist, but those are out of scope for this guide. If you are setting one of those up, ask in the [Discord](https://discord.gg/invite/VvagXJn7Bq) for advice.
+{.is-info}
+
 ## What is ScotMesh?
 
 ScotMesh is a community radio messaging network across Scotland. It uses small, low-power LoRa radios to carry short messages between people — no mobile network, no Wi-Fi, no internet required.
@@ -20,11 +23,11 @@ Think of it like a local text messaging service that works off-grid, powered by 
 
 ## What you need
 
-- A LoRa device that supports MeshCore (sometimes called a companion node).
+- A MeshCore **companion node** — a small LoRa radio that pairs with your phone over Bluetooth.
 - A smartphone — Android or iPhone both work.
 - That is it.
 
-> Not sure what device to get? Ask in the [Discord](https://discord.gg/invite/VvagXJn7Bq) and the community can point you in the right direction.
+> Not sure which companion node to get? Ask in the [Discord](https://discord.gg/invite/VvagXJn7Bq) and the community can point you in the right direction.
 {.is-info}
 
 ## 1. Get the app

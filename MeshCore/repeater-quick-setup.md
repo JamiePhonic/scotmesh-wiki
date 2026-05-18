@@ -55,8 +55,7 @@ Start with `sco` and `ioi`, then add the local areas the repeater genuinely cove
 | Location / coverage | Regions to add | Notes |
 |---|---|---|
 | Any Scottish repeater | `sco`, `ioi` | Baseline ScotMesh setup. |
-| Fife | `sco`, `ioi`, `fif` | Use for Fife coverage, including Glenrothes. |
-| Glenrothes | `sco`, `ioi`, `fif` | Glenrothes uses the Fife scope. |
+| Fife | `sco`, `ioi`, `fif` | Fife-wide coverage. |
 | Central Scotland | `sco`, `ioi`, `cen` | Wider Central belt coverage. |
 | Falkirk | `sco`, `ioi`, `cen`, `fal` | Falkirk local coverage. |
 | Edinburgh area | `sco`, `ioi`, `cen`, `edi` | Edinburgh-facing Central Scotland coverage. |
@@ -100,9 +99,9 @@ set flood.advert.interval 24
 region save
 ```
 
-### Fife / Glenrothes repeater
+### Fife repeater
 
-Use this when the repeater serves Fife, including Glenrothes.
+Use this when the repeater serves Fife.
 
 ```text
 region put sco *

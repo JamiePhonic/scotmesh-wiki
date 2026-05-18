@@ -48,7 +48,6 @@ The following table lists known community channels and proposed channels for Sco
 | `#edinburgh` | Local | `edi` | Proposed | Edinburgh area traffic. |
 | `#falkirk` | Local | `fal` | Proposed | Falkirk area traffic. |
 | `#fife` | Local | `fif` | Current | Fife area traffic. |
-| `#glenrothes` | Local | `fif` | Proposed | Glenrothes area traffic, scoped through Fife. |
 | `#glasgow` | Local | `gla` | Proposed | Glasgow area traffic. |
 | `#perth` | Local | `per` | Proposed | Perth area traffic. |
 | `#tayside` | Local | `tay` | Proposed | Tayside traffic. |
