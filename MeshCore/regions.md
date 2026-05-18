@@ -142,7 +142,7 @@ ioi
 
 If another region wants to peer with Scotland in a similar way, they should already have the following in place:
 
-1. **Wildcard forwarding disallowed** on their routers (the same principle as the Scottish setup: deny wildcard forwarding with `region denyf *`; see [Wildcard forwarding is not allowed](#wildcard-forwarding-is-not-allowed)).
+1. **Wildcard forwarding disallowed** on their repeaters (the same principle as the Scottish setup: deny wildcard forwarding with `region denyf *`; see [Wildcard forwarding is not allowed](#wildcard-forwarding-is-not-allowed)).
 2. **Appropriate regions on their repeaters** so traffic is not forwarded wider than intended, and Scottish repeaters are not flooded with scoped traffic they did not agree to carry.
 3. **Neighbouring Scotland in RF terms** so equipment can **directly** peer, rather than assuming long unofficial relay chains.
 
@@ -436,3 +436,6 @@ Our agreed approach is:
 - Do not use long prefixes such as `gb-sco` or `sco-fal` in this local scheme.
 
 This gives us a clean, readable, and expandable foundation for building a coordinated Scottish MeshCore network.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTg0MjkwNDk2NF19
+-->
