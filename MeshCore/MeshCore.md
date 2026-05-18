@@ -26,6 +26,7 @@ ScotMesh uses MeshCore — a radio messaging system for small LoRa devices. It l
 - [Getting Started](getting-started) — what it is, what you need, your first message.
 - [Scopes](scopes) — the one setting that matters most.
 - [Channels](channels) — where to talk and what scope to use.
+- [FAQ](faq) — quick answers to common questions.
 
 ## 📡 Setting up a repeater?
 
