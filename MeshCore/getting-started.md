@@ -8,20 +8,20 @@ editor: markdown
 dateCreated: 2026-05-18T22:28:00.000Z
 ---
 
-# Getting Started with ScotMesh
+# Getting Started with ScotMesh 🏴󠁧󠁢󠁳󠁣󠁴󠁿
 
-Welcome. This page is for people who are brand new to ScotMesh and MeshCore. You do not need to know anything about radio or networking to follow this guide.
+Never used MeshCore before? Good — this is the place to start. No radio knowledge needed.
 
 > This guide is written for **companion node** devices — small LoRa radios that pair with the MeshCore Companion App on your phone. More capable standalone devices do exist, but those are out of scope for this guide. If you are setting one of those up, ask in the [Discord](https://discord.gg/invite/VvagXJn7Bq) for advice.
 {.is-info}
 
-## What is ScotMesh?
+## 🏴󠁧󠁢󠁳󠁣󠁴󠁿 What is ScotMesh?
 
 ScotMesh is a community radio messaging network across Scotland. It uses small, low-power LoRa radios to carry short messages between people — no mobile network, no Wi-Fi, no internet required.
 
 Think of it like a local text messaging service that works off-grid, powered by volunteer-run repeaters dotted across the country.
 
-## What you need
+## 🎒 What you need
 
 - A MeshCore **companion node** — a small LoRa radio that pairs with your phone over Bluetooth.
 - A smartphone — Android or iPhone both work.
@@ -30,7 +30,7 @@ Think of it like a local text messaging service that works off-grid, powered by 
 > Not sure which companion node to get? Ask in the [Discord](https://discord.gg/invite/VvagXJn7Bq) and the community can point you in the right direction.
 {.is-info}
 
-## 1. Get the app
+## 📱 1. Get the app
 
 Download the **MeshCore Companion App** on your phone.
 
@@ -39,7 +39,7 @@ Download the **MeshCore Companion App** on your phone.
 
 Open the app once it has installed.
 
-## 2. Connect your device
+## 🔵 2. Connect your device
 
 1. Make sure your LoRa device is powered on.
 2. In the app, tap **Add Device** or the connect button.
@@ -49,7 +49,7 @@ Open the app once it has installed.
 > If the device does not show up, make sure Bluetooth is enabled on your phone and that the device is in pairing mode. Check your device's instructions if you are unsure.
 {.is-info}
 
-## 3. One important setting
+## ⚙️ 3. One important setting
 
 Before you send anything, set your **default scope** to `sco`. This makes sure your messages are correctly routed on the Scottish mesh.
 
@@ -60,7 +60,7 @@ Before you send anything, set your **default scope** to `sco`. This makes sure y
 > This is the most important setting on ScotMesh. Without it, your messages may not travel anywhere useful on our network.
 {.is-warning}
 
-## 4. Send your first message
+## 💬 4. Send your first message
 
 1. In the app, open or create a channel called `#scotland`.
 2. Check the channel scope is set to `sco`. If the app shows a scope option, make sure it says `sco`.
@@ -68,7 +68,7 @@ Before you send anything, set your **default scope** to `sco`. This makes sure y
 
 That is all you need to do. If there is a repeater nearby, your message should travel through the mesh.
 
-## 5. Nothing coming back?
+## 🤔 5. Nothing coming back?
 
 Do not worry — this is normal at first.
 
@@ -77,7 +77,7 @@ Do not worry — this is normal at first.
 - **Try `#test`.** Send a message in a channel called `#test` with scope `sco` — this is what the community uses for testing. If someone else is active they may respond.
 - **Ask for help.** The [Discord](https://discord.gg/invite/VvagXJn7Bq) is friendly and someone will help you work out what is happening.
 
-## Where to go next
+## 🗺️ Where to go next
 
 Once you are up and running:
 
