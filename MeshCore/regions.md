@@ -250,6 +250,11 @@ Coordinate before adding new codes. If a new area needs a code, discuss it publi
 
 The exact method may vary depending on firmware version and whether you are using the app, web configurator, USB serial, or remote administration. The upstream reference is the MeshCore [CLI Commands](https://docs.meshcore.io/cli_commands/) documentation, especially the region management commands.
 
+> New to repeater setup?
+>
+> Start with [Repeater Quick Setup](repeater-quick-setup), then come back here for the fuller detail.
+{.is-info}
+
 For a Central Scotland / Falkirk repeater, the setup may look conceptually like this:
 
 ```text

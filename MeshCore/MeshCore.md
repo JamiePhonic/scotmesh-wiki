@@ -42,8 +42,9 @@ The Scottish MeshCore network uses deliberate region-based routing. Messages sho
 
 ## Start here
 
-Suggested order if you are new: [Scopes](scopes) (how to set scope and avoid “shouting into the void”) → [Channels](channels) (example names and scopes) → [Regions](regions) if you run or plan repeaters → [Observers](observers) if you uplink to the live map.
+Suggested order if you are new: [Scopes](scopes) (how to set scope and avoid "shouting into the void") → [Channels](channels) (example names and scopes) → [Regions](regions) if you run or plan repeaters → [Observers](observers) if you uplink to the live map.
 
+- [Repeater Quick Setup](repeater-quick-setup) is the easiest starting point for setting up a ScotMesh repeater.
 - [Channels](channels) lists example and proposed MeshCore channels with typical scopes.
 - [Regions](regions) explains the Scottish region code scheme and repeater guidance.
 - [Scopes](scopes) explains how Companion App users should choose and set region scope.
