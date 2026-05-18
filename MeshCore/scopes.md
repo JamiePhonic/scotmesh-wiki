@@ -10,6 +10,9 @@ dateCreated: 2026-04-28T19:59:20.685Z
 
 # MeshCore Scopes
 
+> **Quick start for most users:** open the app, go to **Experimental Settings**, set **Default Scope Region** to `sco`. That is all you need for normal Scottish traffic.
+{.is-success}
+
 > **Scotland:** If you do not have a suitable **scope** set, repeaters on the Scottish MeshCore network may not forward your traffic. You can end up **shouting into the void**. Check your default scope and each channel’s scope before you count on messages reaching anyone.
 {.is-warning}
 

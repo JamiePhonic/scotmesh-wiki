@@ -2,7 +2,7 @@
 title: MeshCore
 description: Introduction to MeshCore in the Scottish Mesh community.
 published: true
-date: 2026-04-24T13:26:07.560Z
+date: 2026-05-18T23:41:00.000Z
 tags: meshcore, scotland
 editor: markdown
 dateCreated: 2026-04-24T13:26:05.328Z
@@ -14,18 +14,7 @@ MeshCore is a radio messaging system for small LoRa devices. It lets people send
 
 For ScotMesh, that means local, regional, and Scotland-wide communication can keep working across a volunteer-run network. You might carry a small companion node connected to your phone, while fixed repeaters in useful locations help messages travel further.
 
-## Important setup notice
-
-> The ScotMesh MeshCore network no longer accepts wildcard `*` traffic.
->
-> If you use the MeshCore Companion App on our network, set your default region to `sco` under **Experimental Settings**. MeshCore calls this setting the **default scope region**. It helps ensure your messages are scoped for Scotland instead of relying on wildcard forwarding. Repeater-side detail: [Regions](regions) (IOI peering agreement).
->
-> For more background, see the MeshCore blog post [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope).
-{.is-warning}
-
 ## Key ideas
-
-MeshCore uses a few terms that are worth understanding before changing settings.
 
 | Term | Meaning |
 |---|---|
@@ -34,23 +23,25 @@ MeshCore uses a few terms that are worth understanding before changing settings.
 | **Region** | A code configured on a repeater to describe the area it serves. |
 | **Repeater** | A fixed node that hears MeshCore traffic and repeats it to extend coverage. |
 
-A channel name alone does not control where traffic travels. The important routing detail is the **scope**. For example, the `#glasgow` channel should use the `gla` scope when traffic should stay in the Glasgow area, while **`#ireland`** may use **`ioi` or `sco`** depending on whether you want the Island of Ireland scoped path or Scotland-wide scoped carriage (see [Scopes](scopes)).
+## New to ScotMesh?
 
-## Scottish MeshCore guidance
+- [Getting Started](getting-started) — what it is, what you need, your first message.
+- [Scopes](scopes) — the one setting that matters most.
+- [Channels](channels) — where to talk and what scope to use.
 
-The Scottish MeshCore network uses deliberate region-based routing. Messages should be sent with a **scope** that matches where they need to travel, and wildcard forwarding is not allowed in the Scottish setup.
+## Setting up a repeater?
 
-## Start here
+- [Repeater Quick Setup](repeater-quick-setup) — start here for hardware and commands.
+- [Regions](regions) — full region code reference and configuration policy.
+- [Observers](observers) — MQTT map uplink setup.
 
-- [Getting Started](getting-started) — brand new? Start here. Everything from unboxing to your first message.
-- [Scopes](scopes) — how to set scope and avoid messages going nowhere.
-- [Channels](channels) — example channel names and the scopes that go with them.
-- [Regions](regions) — for repeater owners and network planners.
-- [Repeater Quick Setup](repeater-quick-setup) — setting up your first ScotMesh repeater.
-- [Observers](observers) — MQTT observer setup for map uplink.
-
-## Useful MeshCore background
+## Interested in the technical detail?
 
 - [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering)
 - [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope)
 - [CLI Commands](https://docs.meshcore.io/cli_commands/)
+
+---
+
+> **ScotMesh network policy:** wildcard `*` forwarding is not allowed. Companion App users should set their default region scope to `sco` under **Experimental Settings**. Repeater owners should use `region denyf *`. See [Regions](regions) for detail.
+{.is-warning}

@@ -37,7 +37,7 @@ A repeater helps the network by hearing MeshCore traffic and passing it on. A go
 
 You will need:
 
-- A supported LoRa device.
+- A supported LoRa device — open the [MeshCore Flasher](https://meshcore.io/flasher) to see what can be flashed, or ask on [Discord](https://discord.gg/invite/VvagXJn7Bq).
 - A USB data cable, not a charge-only cable.
 - A laptop or desktop with Chrome or Edge.
 - A sensible repeater location.
