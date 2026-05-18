@@ -142,11 +142,10 @@ set mqtt.tx on
 ```
 
 Use **`on`** only when you intend that heavier feed (more bandwidth and airtime).
-
 ## See also
 
 - [Regions](regions) — repeater region codes on the Scottish mesh.
 - [MeshCore](meshcore) — hub page for channels, scopes, and related guides.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDU0NjUyNTNdfQ==
+eyJoaXN0b3J5IjpbLTE2OTcyMjk2M119
 -->
