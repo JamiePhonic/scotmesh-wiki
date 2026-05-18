@@ -162,8 +162,6 @@ region save
 
 ## Appendix: what the key commands mean
 
-Keep this simple:
-
 | Command | Meaning |
 |---|---|
 | `region put sco *` | Create `sco` at the top of the region tree. |

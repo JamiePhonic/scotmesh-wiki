@@ -42,15 +42,12 @@ The Scottish MeshCore network uses deliberate region-based routing. Messages sho
 
 ## Start here
 
-Suggested order if you are new: [Scopes](scopes) (how to set scope and avoid "shouting into the void") → [Channels](channels) (example names and scopes) → [Regions](regions) if you run or plan repeaters → [Observers](observers) if you uplink to the live map.
-
-- [Repeater Quick Setup](repeater-quick-setup) is the easiest starting point for setting up a ScotMesh repeater.
-- [Channels](channels) lists example and proposed MeshCore channels with typical scopes.
-- [Regions](regions) explains the Scottish region code scheme and repeater guidance.
-- [Scopes](scopes) explains how Companion App users should choose and set region scope.
-- [Observers](observers) explains MQTT observer setup on repeaters (MayoMesh, firmware, `mqtt.iata`, TX uplink modes).
-
-For normal Scotland-wide traffic, many people use the `#scotland` channel with the `sco` scope. For local traffic, set **scope** to the code that matches the area, whatever channel name you use. For **`#ireland`**, use **`ioi` or `sco`** as described in [Scopes](scopes); `#norniron` is commonly used with `ioi`.
+- [Getting Started](getting-started) — brand new? Start here. Everything from unboxing to your first message.
+- [Scopes](scopes) — how to set scope and avoid messages going nowhere.
+- [Channels](channels) — example channel names and the scopes that go with them.
+- [Regions](regions) — for repeater owners and network planners.
+- [Repeater Quick Setup](repeater-quick-setup) — setting up your first ScotMesh repeater.
+- [Observers](observers) — MQTT observer setup for map uplink.
 
 ## Useful MeshCore background
 

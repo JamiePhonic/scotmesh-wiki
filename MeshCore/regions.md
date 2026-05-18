@@ -10,7 +10,7 @@ dateCreated: 2026-04-25T11:46:10.885Z
 
 # MeshCore Regions
 
-This guide explains how the Scottish MeshCore community uses region codes for repeaters and scoped traffic. It is mainly for repeater owners, node operators, and anyone helping to plan the network.
+This guide is for **repeater owners and network planners**. If you are a Companion App user looking to set your scope, see [Scopes](scopes) instead.
 
 The aim is simple: keep the scheme readable, predictable, and useful as the network grows.
 
@@ -60,7 +60,7 @@ The wildcard marker is:
 > In other words, `region put sco *` can be correct, but `region allowf *` is not suitable for the Scottish setup.
 {.is-warning}
 
-The Scottish MeshCore setup does not allow wildcard forwarding. Users should not rely on unscoped traffic, and repeater owners should deny wildcard forwarding with:
+The Scottish MeshCore setup does not allow wildcard forwarding. Repeater owners must deny wildcard forwarding with:
 
 ```text
 region denyf *
@@ -68,15 +68,7 @@ region denyf *
 
 You may still see `*` used as the root parent when defining the region tree, for example `region put sco *`. That is different from allowing wildcard forwarding.
 
-For users, a useful habit is:
-
-```text
-Use any channel name that suits your group
-Set scope to match where the traffic should travel
-Send the message
-```
-
-For Companion App guidance, see [Scopes](scopes). For channel names and suggested scopes, see [Channels](channels). For **MQTT observer** setup and uplink to the live map, see [Observers](observers).
+For channel names and suggested scopes, see [Channels](channels). For **MQTT observer** setup and uplink to the live map, see [Observers](observers).
 
 ## Scottish region code approach
 
@@ -351,31 +343,6 @@ Use the latest stable MeshCore firmware and app available for your device. Older
 
 MeshCore region filtering was introduced across firmware and app releases, and default scope support was added later. The MeshCore posts [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering) and [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope) are useful background when checking version behaviour.
 
-## What this means for ordinary users
-
-Most ordinary users do not need to configure repeater regions. They do need to choose the correct channel and scope before sending.
-
-For normal Scottish traffic:
-
-```text
-Channel: #scotland
-Scope:   sco
-```
-
-For local traffic, pick a channel and set **scope** to the local code for that area (see [Channels](channels) for examples such as `#edinburgh` with `edi`). For **`#ireland`**, set **`ioi` or `sco`** depending on the path you want (see [Scopes](scopes)); for example:
-
-```text
-Channel: #ireland
-Scope:   ioi
-```
-
-or:
-
-```text
-Channel: #ireland
-Scope:   sco
-```
-
 ## Naming and publishing new region codes
 
 When a new Scottish area needs a code, use these rules:
@@ -441,6 +408,3 @@ Our agreed approach is:
 - Do not use long prefixes such as `gb-sco` or `sco-fal` in this local scheme.
 
 This gives us a clean, readable, and expandable foundation for building a coordinated Scottish MeshCore network.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MjkwNDk2NF19
--->
