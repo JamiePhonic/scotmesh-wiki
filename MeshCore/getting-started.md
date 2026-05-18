@@ -73,7 +73,7 @@ That is all you need to do. If there is a repeater nearby, your message should t
 Do not worry — this is normal at first.
 
 - **Check your scope.** Go back to step 3 and confirm `sco` is set as the default and on the `#scotland` channel.
-- **Check repeater coverage.** Have a look at [meshcore.mayomesh.net](https://meshcore.mayomesh.net/) to see if there are any repeaters near you.
+- **Check repeater coverage.** Have a look at the [MeshCore Node Map](https://map.meshcore.io/) to see if there are any repeaters near you.
 - **Try `#test`.** Send a message in a channel called `#test` with scope `sco` — this is what the community uses for testing. If someone else is active they may respond.
 - **Ask for help.** The [Discord](https://discord.gg/invite/VvagXJn7Bq) is friendly and someone will help you work out what is happening.
 
