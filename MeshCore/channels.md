@@ -42,7 +42,7 @@ The following table lists known community channels and proposed channels for Sco
 |---|---|---|---|---|
 | `#scotland` | Wide | `sco` | Current | General Scotland-wide MeshCore traffic. |
 | `#ireland` | Wide | `ioi` or `sco` | Current | General Island of Ireland traffic. Use `ioi` for the IOI-scoped path or `sco` when you want Scotland-wide scoped carriage on this channel—see [Scopes](scopes). |
-| `#norniron` | Wide | `ioi` | Current | Northern Ireland Traffic |
+| `#norniron` | Wide | `ioi` or `sco` | Current | Northern Ireland Traffic |
 | `#central` | Local | `cen` | Proposed | Central Scotland traffic. |
 | `#dundee` | Local | `dun` | Proposed | Dundee area traffic. |
 | `#edinburgh` | Local | `edi` | Proposed | Edinburgh area traffic. |
@@ -66,7 +66,7 @@ Use the **narrowest scope** that still fits what you are sending; channel names 
 #edinburgh / edi         Local area (same scope idea for #glasgow/gla, #fife/fif, #dundee/dun, …)
 #test / <scope>          Pick the scope you are actually testing
 #ireland / ioi or sco    Island of Ireland channel (pick scope for the path you want)
-#norniron / ioi         Northern Ireland (example)
+#norniron / ioi or sco         Northern Ireland (example)
 ```
 
 ## Good practice
