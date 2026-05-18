@@ -12,7 +12,7 @@ dateCreated: 2026-05-12T12:00:00.000Z
 
 An **MQTT observer** build is a repeater-style MeshCore firmware image that can **uplink** mesh traffic to one or more **MQTT** brokers. That feeds live maps and tools without replacing your normal RF repeater role, unless you deliberately turn repeating off for a receive-only site.
 
-For how the bridge works (up to six broker slots, presets, `custom`, JWT `audience`, merged first flash, and more), see the upstream write-up: [MQTT_IMPLEMENTATION.md (agessaman fork)](https://github.com/agessaman/MeshCore/blob/mqtt-bridge-implementation-flex/MQTT_IMPLEMENTATION.md).
+For how the bridge works (up to three broker slots, presets, `custom`, JWT `audience`, merged first flash, and more), see the upstream write-up: [MQTT_IMPLEMENTATION.md (agessaman fork)](https://github.com/agessaman/MeshCore/blob/mqtt-bridge-implementation-flex/MQTT_IMPLEMENTATION.md).
 
 ## Firmware
 
@@ -151,3 +151,6 @@ Do not paste **Wi‑Fi passwords**, MQTT **passwords**, or private keys into pub
 
 - [Regions](regions) — repeater region codes on the Scottish mesh.
 - [MeshCore](meshcore) — hub page for channels, scopes, and related guides.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzIwMDYwODI4XX0=
+-->
