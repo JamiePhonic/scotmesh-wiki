@@ -143,14 +143,10 @@ set mqtt.tx on
 
 Use **`on`** only when you intend that heavier feed (more bandwidth and airtime).
 
-## Safety
-
-Do not paste **Wi‑Fi passwords**, MQTT **passwords**, or private keys into public chats or screenshots. If **`mqtt.tx on`**, be mindful of **airtime** and how much traffic you export.
-
 ## See also
 
 - [Regions](regions) — repeater region codes on the Scottish mesh.
 - [MeshCore](meshcore) — hub page for channels, scopes, and related guides.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzODg4Nzg1MF19
+eyJoaXN0b3J5IjpbLTE3NDU0NjUyNTNdfQ==
 -->
