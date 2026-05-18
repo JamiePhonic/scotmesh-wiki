@@ -24,7 +24,7 @@ Pick the file that matches your **exact board** (Heltec, LilyGo, RAK, Station G2
 
 **`*_merged.bin` vs the non-merged `.bin`**
 
-- **Files ending in `_merged.bin`** are a **full** image (bootloader, partition table, and application). Flashing one **normally wipes** stored repeater settings (**NVS**, Non-Volatile Storage: flash-backed preferences on ESP32-class boards, including Wi‑Fi, MQTT slots, name, keys, and similar). Use merged when you **need** that full layout refresh—for example the **first** move to observer firmware on a board, or when the observer build’s **partition table** is new for that hardware (see “Partition Table Changes” in [MQTT_IMPLEMENTATION.md](https://github.com/agessaman/MeshCore/blob/mqtt-bridge-implementation-flex/MQTT_IMPLEMENTATION.md)).
+- **Files ending in `_merged.bin`** are a **full** image (bootloader, partition table, and application). Flashing one **normally wipes** stored repeater settings). Use merged when you **need** that full layout refresh—for example the **first** move to observer firmware on a board, or when the observer build’s **partition table** is new for that hardware (see “Partition Table Changes” in [MQTT_IMPLEMENTATION.md](https://github.com/agessaman/MeshCore/blob/mqtt-bridge-implementation-flex/MQTT_IMPLEMENTATION.md)).
 - **Files without `_merged` in the name** update the **app** only when the **partition layout is unchanged**. That path is what you want when you **already run observer firmware** on that board and you want to **keep** your current configuration through an upgrade.
 
 After a merged flash, **re-enter** RF settings, node name, Wi‑Fi, MQTT, `mqtt.iata`, and other stored values. After a non-merged upgrade on the same layout, settings are **usually** kept—still read release notes. Later updates can use **OTA** ([`start ota`](#updates-without-usb-start-ota)) or a non-merged binary when appropriate.
@@ -152,5 +152,5 @@ Do not paste **Wi‑Fi passwords**, MQTT **passwords**, or private keys into pub
 - [Regions](regions) — repeater region codes on the Scottish mesh.
 - [MeshCore](meshcore) — hub page for channels, scopes, and related guides.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwMDYwODI4XX0=
+eyJoaXN0b3J5IjpbLTYzMzg1OTUxNF19
 -->
