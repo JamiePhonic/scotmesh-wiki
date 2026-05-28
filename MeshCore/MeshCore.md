@@ -2,10 +2,10 @@
 title: MeshCore
 description: Introduction to MeshCore in the Scottish Mesh community.
 published: true
-date: 2026-05-18T23:49:00.000Z
+date: 2026-05-28T13:19:27.200Z
 tags: meshcore, scotland
 editor: markdown
-dateCreated: 2026-04-24T13:26:05.628Z
+dateCreated: 2026-04-24T13:26:05.328Z
 ---
 
 # MeshCore
@@ -42,5 +42,5 @@ ScotMesh uses MeshCore — a radio messaging system for small LoRa devices. It l
 
 ---
 
-> **ScotMesh network policy:** wildcard `*` forwarding is not allowed. Companion App users should set their default region scope to `sco` under **Experimental Settings**. Repeater owners should use `region denyf *`. See [Regions](/meshcore/regions) for detail.
+> **ScotMesh network policy:** wildcard `*` forwarding is not allowed. Companion App users should set their default region scope to `sco` under **Experimental Settings**. Repeater owners should use `region denyf *`. See [Regions](/MeshCore/regions) for detail.
 {.is-warning}
