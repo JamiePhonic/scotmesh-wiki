@@ -262,6 +262,8 @@ region allowf fal
 
 region denyf *
 
+region default sco
+
 region save
 ```
 
@@ -286,6 +288,8 @@ region allowf dun
 
 region denyf *
 
+region default sco
+
 region save
 ```
 
@@ -301,6 +305,8 @@ region allowf ioi
 region allowf gla
 
 region denyf *
+
+region default sco
 
 region save
 ```
@@ -321,6 +327,8 @@ region allowf edi
 region allowf ioi
 
 region denyf *
+
+region default sco
 
 region save
 ```
