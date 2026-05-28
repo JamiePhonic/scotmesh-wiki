@@ -1,11 +1,11 @@
 ---
 title: MeshCore Channels
 description: Guidance for MeshCore channel names and region scopes in the Scottish MeshCore network.
-published: true
-date: 2026-05-11T21:52:00.000Z
-tags: meshcore, channels, scotland
+published: false
+date: 2026-05-28T14:28:20.756Z
+tags: meshcore, scotland, channels
 editor: markdown
-dateCreated: 2026-05-11T21:52:00.000Z
+dateCreated: 2026-05-28T13:04:06.889Z
 ---
 
 # MeshCore Channels
