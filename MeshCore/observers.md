@@ -1,11 +1,11 @@
 ---
 title: MeshCore Observers
 description: How to set up an MQTT observer on a MeshCore repeater for ScotMesh, including MayoMesh, firmware, and uplink settings.
-published: true
-date: 2026-05-12T12:00:00.000Z
-tags: meshcore, observers, mqtt, repeater, scotland
+published: false
+date: 2026-05-28T14:32:24.831Z
+tags: meshcore, scotland, observers, mqtt, repeater
 editor: markdown
-dateCreated: 2026-05-12T12:00:00.000Z
+dateCreated: 2026-05-28T13:04:19.002Z
 ---
 
 # MeshCore Observers
