@@ -2,7 +2,7 @@
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
 published: false
-date: 2026-05-28T14:10:55.467Z
+date: 2026-05-28T14:18:21.207Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
 dateCreated: 2026-05-28T13:04:14.267Z
@@ -54,7 +54,7 @@ Download the **MeshCore Companion App** on your phone.
 
 Open the app once it has installed.
 
-> 2.  Need a section here decribing how to flash the latest firmware on the lora device. Its impertive the user does not use the firmwar that comes with the node as this may be wrong.
+> 2.  Need a section here decribing how to flash the latest firmware on the lora device. Its impertive the user does not use the firmware that comes with the node as this may be wrong.
 > 
 {.is-info}
 
@@ -77,7 +77,7 @@ Open the app once it has installed.
 ## ⚙️ 3. One important setting
 
 
-> Region(s) need to be entered BEFORE a default scope can be set
+> Region(s) description need to be linked here. A default scope can be set, but the user needs to understand the difference between region and scope  and that the scope is basically a form of addressing (for the messages) for the correct  region.
 
 
 Before you send anything, set your **default scope** to `sco`. This makes sure your messages are correctly routed on the Scottish mesh.
