@@ -2,21 +2,29 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-05-11T21:52:00.000Z
-tags: meshcore, regions, scotland
+date: 2026-05-28T15:00:17.579Z
+tags: meshcore, scotland, regions
 editor: markdown
-dateCreated: 2026-04-25T11:46:10.885Z
+dateCreated: 2026-05-28T13:04:23.987Z
 ---
 
 # MeshCore Regions
 
+---
+
+### NOTE - A Regional Framework was impelemented in the ScotMesh Meshcore Mesh at the beginning of April 2026. This was out of sheer necessity as our mesh was dying under the flood traffic from England (24,000 flood packets & 600+ messages daily). This saved our mesh from descending into a chaotic, unusable mess of incoherent rambles and frustrated messgaing failures. This is why an understaning of regions is imperative to understanding where we are today 
+
+
+---
+
+
 This guide is for **repeater owners and network planners**. If you are a Companion App user looking to set your scope, see [Scopes](/meshcore/scopes) instead.
 
-The aim is simple: keep the scheme readable, predictable, and useful as the network grows.
+The aim is simple: keep the scheme readable, predictable, and ~~useful~~ usable as the network grows.
 
 ## Why regions are needed
 
-MeshCore messages can travel through repeaters. That is useful, but if every repeater carries every message everywhere, the network becomes noisy and inefficient.
+MeshCore messages can travel through repeaters. That is useful, but if every repeater carries every message everywhere, the network becomes noisy ~~and~~, inefficient and flooded with uneccessary traffic.
 
 Regions help us:
 
@@ -41,8 +49,8 @@ There are two related concepts: **regions** and **scopes**.
 
 | Term | Meaning | Example |
 |---|---|---|
-| **Region** | A code configured on a repeater to describe the area it serves. | An Edinburgh-area repeater includes `edi`. |
-| **Scope** | A code applied to messages or channels to describe where the traffic is intended to travel. | The `#glasgow` channel might use `gla` when traffic should stay in that area. |
+| **Region** | A ~~code~~ label configured on a repeater to describe the area it serves. | An Edinburgh-area repeater includes `edi`. |
+| **Scope** | A ~~code~~ label applied to messages or channels to describe which area (or region) the traffic is intended to travel. | The `#glasgow` channel might use `gla` when traffic should stay in that area. |
 {.dense}
 
 A repeater should only carry scoped traffic for regions it genuinely serves.
@@ -116,7 +124,7 @@ The Scottish and Island of Ireland MeshCore communities maintain an **IOI peerin
 
 Under that agreement, Scottish repeaters add the `ioi` region alongside `sco` where the Scottish baseline applies, and Island of Ireland repeaters add `sco` alongside their own region codes in the same spirit. Messages with matching **scopes** can then move between the two networks predictably, without relying on wildcard forwarding. For example channel names and typical scopes, see [Channels](/meshcore/channels).
 
-The `ioi` code is still **not** a Scottish local region. It marks repeaters and traffic that deliberately participate in that peering.
+The `ioi` code is ~~still~~ **not** a Scottish local region. It marks repeaters and traffic that deliberately participate in that peering.
 
 Do not use:
 
@@ -160,7 +168,7 @@ ioi
 In plain English:
 
 - `sco` is for Scotland-wide traffic.
-- `tay`, `cen`, and `fif` are wider Scottish regions.
+- `tay`, `cen`, and `fif` are ~~wider~~ Scottish sub regions.
 - `fal`, `edi`, `gla`, `dun`, and `per` are local areas.
 - `ioi` is for the Island of Ireland under the IOI peering agreement.
 
@@ -369,7 +377,7 @@ When a new Scottish area needs a code, use these rules:
 Examples of possible future codes might include:
 
 ```text
-stg = Stirling
+sti = Stirling
 liv = Livingston
 abe = Aberdeen
 inv = Inverness
