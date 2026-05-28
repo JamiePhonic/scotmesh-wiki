@@ -60,8 +60,8 @@ Before you send anything, set your **default scope** to `sco`. This makes sure y
 > This is the most important setting on ScotMesh. Without it, your messages may not travel anywhere useful on our network.
 {.is-warning}
 
-> **If you use MeshCore on other networks too**, be aware that setting a default scope of `sco` will confine *all* your flood packets — adverts, DMs, login requests — to Scotland. You will need to change this setting when connecting to a different mesh. See the [MeshCore blog post on default scope](https://blog.meshcore.io/2026/04/17/default-scope) for full details.
-{.is-warning}
+> Without a default scope of `sco`, ScotMesh repeaters will **not** receive your adverts. This means you will appear offline to the network even if you can hear it. Do not skip this step.
+{.is-danger}
 
 ## 💬 4. Send your first message
 
