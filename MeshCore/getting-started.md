@@ -2,7 +2,7 @@
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
 published: false
-date: 2026-05-28T13:58:49.546Z
+date: 2026-05-28T14:10:55.467Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
 dateCreated: 2026-05-28T13:04:14.267Z
@@ -77,6 +77,8 @@ Open the app once it has installed.
 ## ⚙️ 3. One important setting
 
 
+> Region(s) need to be entered BEFORE a default scope can be set
+
 
 Before you send anything, set your **default scope** to `sco`. This makes sure your messages are correctly routed on the Scottish mesh.
 
@@ -86,6 +88,12 @@ Before you send anything, set your **default scope** to `sco`. This makes sure y
 
 > This is the most important setting on ScotMesh. Without it, your messages may not travel anywhere useful on our network.
 {.is-warning}
+
+
+> Lots more settings to be enetered before we get to sending messgae stage e.g.  EU/UK narrow, path hash, etc etc.    if this is to flow logical as a set up guide for companion nodes we need it to flow correctly
+> 
+
+
 
 ## 💬 4. Send your first message
 
@@ -100,7 +108,8 @@ That is all you need to do. If there is a repeater nearby, your message should t
 Do not worry — this is normal at first.
 
 - **Check your scope.** Go back to step 3 and confirm `sco` is set as the default and on the `#scotland` channel.
-- **Check repeater coverage.** Have a look at the [MeshCore Node Map](https://map.meshcore.io/) to see if there are any repeaters near you.
+- ~~**Check repeater coverage.** Have a look at the [MeshCore Node Map](https://map.meshcore.io/) to see if there are any repeaters near you.~~
+> The web map is inacureate and alway out of date. THe companion app map will be empty until it hears adverts. the only way to reliably check for rpeaters is to use the repeater search tool in the companion app
 - **Try `#test`.** Send a message in a channel called `#test` with scope `sco` — this is what the community uses for testing. If someone else is active they may respond.
 - **Ask for help.** The [Discord](https://discord.gg/invite/VvagXJn7Bq) is friendly and someone will help you work out what is happening.
 
