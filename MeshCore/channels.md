@@ -73,9 +73,9 @@ Use the **narrowest scope** that still fits what you are sending. Examples:
 - Keep local traffic local where possible.
 - Use `#test` for test messages so normal channels stay readable.
 - Use Scotland-wide scope only when the conversation is relevant across Scotland.
-- Use `ioi` when the message belongs on the Island of Ireland scope, or `sco` on `#ireland` when you want Scotland-wide scoped carriage (see [Scopes](scopes)).
+- Use `ioi` when the message belongs on the Island of Ireland scope, or `sco` on `#ireland` when you want Scotland-wide scoped carriage (see [Scopes](/meshcore/scopes)).
 - Wildcard forwarding is not part of the usual Scottish setup.
 - New public channel names tend to land better when discussed with the community first.
 - Always check the Companion App scope before sending — a wrong scope and your message goes nowhere useful.
 
-For more detail on setting scope in the Companion App, see [Scopes](scopes). For repeater and region code guidance, see [Regions](regions). For **MQTT observers** and map uplink, see [Observers](observers).
+For more detail on setting scope in the Companion App, see [Scopes](/meshcore/scopes). For repeater and region code guidance, see [Regions](/meshcore/regions). For **MQTT observers** and map uplink, see [Observers](/meshcore/observers).

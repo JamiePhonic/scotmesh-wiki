@@ -23,16 +23,16 @@ ScotMesh uses MeshCore — a radio messaging system for small LoRa devices. It l
 
 ## 👋 New to ScotMesh?
 
-- [Getting Started](getting-started) — what it is, what you need, your first message.
-- [Scopes](scopes) — the one setting that matters most.
-- [Channels](channels) — where to talk and what scope to use.
-- [FAQ](faq) — quick answers to common questions.
+- [Getting Started](/meshcore/getting-started) — what it is, what you need, your first message.
+- [Scopes](/meshcore/scopes) — the one setting that matters most.
+- [Channels](/meshcore/channels) — where to talk and what scope to use.
+- [FAQ](/meshcore/faq) — quick answers to common questions.
 
 ## 📡 Setting up a repeater?
 
-- [Repeater Quick Setup](repeater-quick-setup) — start here for hardware and commands.
-- [Regions](regions) — full region code reference and configuration policy.
-- [Observers](observers) — MQTT map uplink setup.
+- [Repeater Quick Setup](/meshcore/repeater-quick-setup) — start here for hardware and commands.
+- [Regions](/meshcore/regions) — full region code reference and configuration policy.
+- [Observers](/meshcore/observers) — MQTT map uplink setup.
 
 ## 🔧 Interested in the technical detail?
 
@@ -42,5 +42,5 @@ ScotMesh uses MeshCore — a radio messaging system for small LoRa devices. It l
 
 ---
 
-> **ScotMesh network policy:** wildcard `*` forwarding is not allowed. Companion App users should set their default region scope to `sco` under **Experimental Settings**. Repeater owners should use `region denyf *`. See [Regions](regions) for detail.
+> **ScotMesh network policy:** wildcard `*` forwarding is not allowed. Companion App users should set their default region scope to `sco` under **Experimental Settings**. Repeater owners should use `region denyf *`. See [Regions](/meshcore/regions) for detail.
 {.is-warning}

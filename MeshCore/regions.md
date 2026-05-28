@@ -10,7 +10,7 @@ dateCreated: 2026-04-25T11:46:10.885Z
 
 # MeshCore Regions
 
-This guide is for **repeater owners and network planners**. If you are a Companion App user looking to set your scope, see [Scopes](scopes) instead.
+This guide is for **repeater owners and network planners**. If you are a Companion App user looking to set your scope, see [Scopes](/meshcore/scopes) instead.
 
 The aim is simple: keep the scheme readable, predictable, and useful as the network grows.
 
@@ -68,7 +68,7 @@ region denyf *
 
 You may still see `*` used as the root parent when defining the region tree, for example `region put sco *`. That is different from allowing wildcard forwarding.
 
-For channel names and suggested scopes, see [Channels](channels). For **MQTT observer** setup and uplink to the live map, see [Observers](observers).
+For channel names and suggested scopes, see [Channels](/meshcore/channels). For **MQTT observer** setup and uplink to the live map, see [Observers](/meshcore/observers).
 
 ## Scottish region code approach
 
@@ -114,7 +114,7 @@ The upstream MeshCore region filtering guidance explains that region names shoul
 
 The Scottish and Island of Ireland MeshCore communities maintain an **IOI peering agreement**: scoped traffic is carried on the other network only where **both** sides configure for it.
 
-Under that agreement, Scottish repeaters add the `ioi` region alongside `sco` where the Scottish baseline applies, and Island of Ireland repeaters add `sco` alongside their own region codes in the same spirit. Messages with matching **scopes** can then move between the two networks predictably, without relying on wildcard forwarding. For example channel names and typical scopes, see [Channels](channels).
+Under that agreement, Scottish repeaters add the `ioi` region alongside `sco` where the Scottish baseline applies, and Island of Ireland repeaters add `sco` alongside their own region codes in the same spirit. Messages with matching **scopes** can then move between the two networks predictably, without relying on wildcard forwarding. For example channel names and typical scopes, see [Channels](/meshcore/channels).
 
 The `ioi` code is still **not** a Scottish local region. It marks repeaters and traffic that deliberately participate in that peering.
 
@@ -244,7 +244,7 @@ The exact method may vary depending on firmware version and whether you are usin
 
 > New to repeater setup?
 >
-> Start with [Repeater Quick Setup](repeater-quick-setup), then come back here for the fuller detail.
+> Start with [Repeater Quick Setup](/meshcore/repeater-quick-setup), then come back here for the fuller detail.
 {.is-info}
 
 For a Central Scotland / Falkirk repeater, the setup may look conceptually like this:

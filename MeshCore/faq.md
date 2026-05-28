@@ -32,7 +32,7 @@ The [MeshCore Node Map](https://map.meshcore.io/) shows where ScotMesh repeaters
 
 A few things to check, in order:
 
-1. **Scope is wrong.** The most common cause. Go to **Experimental Settings** in the app and confirm **Default Scope Region** is set to `sco`. Then check the channel scope too — see [Scopes](scopes).
+1. **Scope is wrong.** The most common cause. Go to **Experimental Settings** in the app and confirm **Default Scope Region** is set to `sco`. Then check the channel scope too — see [Scopes](/meshcore/scopes).
 2. **No repeater nearby.** Check the [MeshCore Node Map](https://map.meshcore.io/) to see if there is a repeater in your area.
 3. **Wrong radio preset.** Make sure your device is flashed with the **EU/UK (Narrow)** preset. A device on the wrong channel or spreading factor will not hear anything.
 4. **Device not transmitting.** Try `#test` with scope `sco` — you should at least see your own message go out.
@@ -46,7 +46,7 @@ If you have checked all of the above and still hear nothing, ask on [Discord](ht
 - A **channel** is a named group chat — `#scotland`, `#glasgow`, `#test`. It is just a label for people.
 - A **scope** is a region code that repeaters use to decide whether to carry your message — `sco`, `gla`, `edi`.
 
-You can send a message on `#glasgow` with the scope set to `sco` and it will go Scotland-wide. Or you can set the scope to `gla` and it will only travel through Glasgow-area repeaters. The channel name does not change that — the scope does. See [Scopes](scopes) for the full explanation.
+You can send a message on `#glasgow` with the scope set to `sco` and it will go Scotland-wide. Or you can set the scope to `gla` and it will only travel through Glasgow-area repeaters. The channel name does not change that — the scope does. See [Scopes](/meshcore/scopes) for the full explanation.
 
 ---
 
@@ -54,7 +54,7 @@ You can send a message on `#glasgow` with the scope set to `sco` and it will go 
 
 The `*` wildcard tells repeaters to forward everything to everyone. On a well-grown network that floods the airtime with traffic that most people do not need. ScotMesh uses deliberate region scopes instead — set `sco` for Scotland-wide, `gla` for Glasgow, and so on — so traffic only travels where it is actually useful.
 
-There is one exception: `*` is used as a root parent in repeater configuration commands (for example `region put sco *`). That is a region tree concept, not wildcard forwarding. See [Regions](regions) for the detail.
+There is one exception: `*` is used as a root parent in repeater configuration commands (for example `region put sco *`). That is a region tree concept, not wildcard forwarding. See [Regions](/meshcore/regions) for the detail.
 
 ---
 
@@ -62,7 +62,7 @@ There is one exception: `*` is used as a root parent in repeater configuration c
 
 Yes, but your range is very limited. Two companion nodes in line of sight can talk directly. If there is no repeater between you and another user, messages will only reach as far as direct radio range allows — often just a few hundred metres in built-up areas.
 
-If you want to extend coverage in your area, the best thing to do is put up a repeater. See [Repeater Quick Setup](repeater-quick-setup).
+If you want to extend coverage in your area, the best thing to do is put up a repeater. See [Repeater Quick Setup](/meshcore/repeater-quick-setup).
 
 ---
 
@@ -84,13 +84,13 @@ You can also check the [MeshCore Node Map](https://map.meshcore.io/) — if your
 
 ## Do I need to set scope for every channel separately?
 
-Not necessarily. If you set a **default scope** of `sco` in Experimental Settings, that applies to any channel that does not have its own scope override. You only need to set a per-channel scope when you want something different — for example `gla` on `#glasgow` to keep traffic local, or `ioi` on `#ireland` for the Island of Ireland path. See [Scopes](scopes) for the full detail.
+Not necessarily. If you set a **default scope** of `sco` in Experimental Settings, that applies to any channel that does not have its own scope override. You only need to set a per-channel scope when you want something different — for example `gla` on `#glasgow` to keep traffic local, or `ioi` on `#ireland` for the Island of Ireland path. See [Scopes](/meshcore/scopes) for the full detail.
 
 ---
 
 ## What is the Island of Ireland (`ioi`) scope?
 
-ScotMesh and the Irish MeshCore community have a peering agreement. Repeaters on both sides carry the `ioi` scope so that traffic can move between the two networks in a controlled way — without flooding everything. You can join `#ireland` and set scope to `ioi` to talk on that path. See [Channels](channels) for more.
+ScotMesh and the Irish MeshCore community have a peering agreement. Repeaters on both sides carry the `ioi` scope so that traffic can move between the two networks in a controlled way — without flooding everything. You can join `#ireland` and set scope to `ioi` to talk on that path. See [Channels](/meshcore/channels) for more.
 
 ---
 

@@ -60,9 +60,6 @@ Before you send anything, set your **default scope** to `sco`. This makes sure y
 > This is the most important setting on ScotMesh. Without it, your messages may not travel anywhere useful on our network.
 {.is-warning}
 
-> Without a default scope of `sco`, ScotMesh repeaters will **not** receive your adverts. This means you will appear offline to the network even if you can hear it. Do not skip this step.
-{.is-danger}
-
 ## 💬 4. Send your first message
 
 1. In the app, open or create a channel called `#scotland`.
@@ -84,6 +81,6 @@ Do not worry — this is normal at first.
 
 Once you are up and running:
 
-- [Scopes](scopes) explains what scope means and how to set it properly for different channels.
-- [Channels](channels) lists the agreed community channels and what scope to use with each.
-- [Repeater Quick Setup](repeater-quick-setup) is for you if you want to set up a repeater and help the network grow.
+- [Scopes](/meshcore/scopes) explains what scope means and how to set it properly for different channels.
+- [Channels](/meshcore/channels) lists the agreed community channels and what scope to use with each.
+- [Repeater Quick Setup](/meshcore/repeater-quick-setup) is for you if you want to set up a repeater and help the network grow.

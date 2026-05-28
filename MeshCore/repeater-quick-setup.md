@@ -166,9 +166,9 @@ region save
 
 ## Where to go next
 
-- [Regions](regions) has the fuller region guide and more command examples.
-- [Scopes](scopes) explains what Companion App users need to set.
-- [Channels](channels) lists the agreed and proposed channels.
+- [Regions](/meshcore/regions) has the fuller region guide and more command examples.
+- [Scopes](/meshcore/scopes) explains what Companion App users need to set.
+- [Channels](/meshcore/channels) lists the agreed and proposed channels.
 - [MeshCore CLI Commands](https://docs.meshcore.io/cli_commands/) is the upstream command reference.
 
 ## Appendix: what the key commands mean

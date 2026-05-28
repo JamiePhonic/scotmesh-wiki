@@ -30,7 +30,7 @@ Without scope, repeaters have no way to know whether to carry your traffic. With
 - Reduce unnecessary flooding.
 - Keep the network easier to grow.
 
-For example channel names and typical scopes, see [Channels](channels). For repeater region codes, see [Regions](regions).
+For example channel names and typical scopes, see [Channels](/meshcore/channels). For repeater region codes, see [Regions](/meshcore/regions).
 
 ## 🗺️ What region scope means
 
@@ -48,7 +48,7 @@ A message scoped to `sco` is forwarded by repeaters that carry `sco`. A message 
 
 The wildcard marker is `*`. Do not rely on it for routing — the Scottish MeshCore setup expects explicit region scopes.
 
-In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `gla`, `ioi`, and so on). On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in [Regions](regions).
+In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `gla`, `ioi`, and so on). On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in [Regions](/meshcore/regions).
 
 ## 📋 Documented scope codes
 

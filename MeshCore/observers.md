@@ -42,7 +42,7 @@ Use your build’s normal OTA workflow (browser or tool) once the device is adve
 ## Observer setup
 
 1. **Flash** the `*repeater_observer_mqtt*` file for your board ([Firmware](#firmware) explains **`_merged.bin`** vs non-merged).
-2. **If NVS was wiped** (typical after **`_merged.bin`**; **NVS** is *Non-Volatile Storage*—flash-backed settings such as Wi‑Fi, MQTT, and radio prefs), set **RF and node identity** first: frequency, bandwidth, SF, CR, TX power, and **name** must match your mesh before the node is useful on air. Use the **device web UI** or admin screens, or serial, using your coordinator’s values; repeater planning is in [Regions](regions). **Then** work through **Wi‑Fi** → **`mqtt.iata`** → (optional **receive-only**) → **MQTT** in order below. **If you used a non-merged** update and kept settings, use `get` and only redo what is wrong—but **still check MQTT**: stock images often leave **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2** until you repoint them (for example MayoMesh on slot 1).
+2. **If NVS was wiped** (typical after **`_merged.bin`**; **NVS** is *Non-Volatile Storage*—flash-backed settings such as Wi‑Fi, MQTT, and radio prefs), set **RF and node identity** first: frequency, bandwidth, SF, CR, TX power, and **name** must match your mesh before the node is useful on air. Use the **device web UI** or admin screens, or serial, using your coordinator’s values; repeater planning is in [Regions](/meshcore/regions). **Then** work through **Wi‑Fi** → **`mqtt.iata`** → (optional **receive-only**) → **MQTT** in order below. **If you used a non-merged** update and kept settings, use `get` and only redo what is wrong—but **still check MQTT**: stock images often leave **LetsMesh Analyzer US** on **slot 1** and **LetsMesh Analyzer EU** on **slot 2** until you repoint them (for example MayoMesh on slot 1).
 
 ### Wi‑Fi
 
@@ -144,5 +144,5 @@ set mqtt.tx on
 Use **`on`** only when you intend that heavier feed (more bandwidth and airtime).
 ## 🔗 See also
 
-- [Regions](regions) — repeater region codes on the Scottish mesh.
-- [MeshCore](meshcore) — hub page for channels, scopes, and related guides.
+- [Regions](/meshcore/regions) — repeater region codes on the Scottish mesh.
+- [MeshCore](/meshcore/meshcore) — hub page for channels, scopes, and related guides.
