@@ -1,11 +1,11 @@
 ---
 title: MeshCore Repeater Quick Setup
 description: A short ScotMesh guide for setting up a MeshCore repeater with the right region settings.
-published: true
-date: 2026-05-12T09:54:00.000Z
-tags: meshcore, repeater, scotland
+published: false
+date: 2026-05-28T14:33:17.595Z
+tags: meshcore, scotland, repeater
 editor: markdown
-dateCreated: 2026-05-12T09:54:00.000Z
+dateCreated: 2026-05-28T13:04:28.236Z
 ---
 
 # MeshCore Repeater Quick Setup
