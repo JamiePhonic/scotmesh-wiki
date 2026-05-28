@@ -1,25 +1,40 @@
 ---
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
-published: true
-date: 2026-05-18T22:28:00.000Z
+published: false
+date: 2026-05-28T13:58:49.546Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
-dateCreated: 2026-05-18T22:28:00.000Z
+dateCreated: 2026-05-28T13:04:14.267Z
 ---
 
-# Getting Started with ScotMesh 🏴󠁧󠁢󠁳󠁣󠁴󠁿
+# Getting Started within ScotMesh 🏴󠁧󠁢󠁳󠁣󠁴󠁿
+
+
+---
+
+
+## 🏴󠁧󠁢󠁳󠁣󠁴󠁿 What is ScotMesh?
+
+ScotMesh is community radio messaging networks across Scotland. It uses small, low-power LoRa radios to carry short messages between people — no mobile network, no Wi-Fi, no internet required. 
+Think of it like a local text messaging service that works off-grid, powered by volunteer-run repeaters dotted across the country.
+
+
+**Currently both Meshtastic and Mescore networks are available**
+
+# **NOTE  This document focuses on Meschore**
+
+
+
+
 
 Never used MeshCore before? Good — this is the place to start. No radio knowledge needed.
 
 > This guide is written for **companion node** devices — small LoRa radios that pair with the MeshCore Companion App on your phone. More capable standalone devices do exist, but those are out of scope for this guide. If you are setting one of those up, ask in the [Discord](https://discord.gg/invite/VvagXJn7Bq) for advice.
 {.is-info}
 
-## 🏴󠁧󠁢󠁳󠁣󠁴󠁿 What is ScotMesh?
 
-ScotMesh is a community radio messaging network across Scotland. It uses small, low-power LoRa radios to carry short messages between people — no mobile network, no Wi-Fi, no internet required.
 
-Think of it like a local text messaging service that works off-grid, powered by volunteer-run repeaters dotted across the country.
 
 ## 🎒 What you need
 
@@ -39,7 +54,17 @@ Download the **MeshCore Companion App** on your phone.
 
 Open the app once it has installed.
 
-## 🔵 2. Connect your device
+> 2.  Need a section here decribing how to flash the latest firmware on the lora device. Its impertive the user does not use the firmwar that comes with the node as this may be wrong.
+> 
+{.is-info}
+
+
+
+
+
+
+
+## 🔵 3. Connect your device
 
 1. Make sure your LoRa device is powered on.
 2. In the app, tap **Add Device** or the connect button.
@@ -50,6 +75,8 @@ Open the app once it has installed.
 {.is-info}
 
 ## ⚙️ 3. One important setting
+
+
 
 Before you send anything, set your **default scope** to `sco`. This makes sure your messages are correctly routed on the Scottish mesh.
 
