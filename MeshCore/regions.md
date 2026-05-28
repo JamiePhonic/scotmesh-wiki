@@ -2,7 +2,7 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-05-28T15:01:21.494Z
+date: 2026-05-28T15:01:35.550Z
 tags: meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:23.987Z
