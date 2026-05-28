@@ -31,6 +31,7 @@ A repeater helps the network by hearing MeshCore traffic and passing it on. A go
 | Local regions | Add only the areas the repeater genuinely serves |
 | Wildcard forwarding | Deny with `region denyf *` |
 | Flood advert interval | 24 hours |
+| Default scope | `sco` — **required** so other repeaters accept your adverts |
 {.dense}
 
 ## Before you start
@@ -77,7 +78,8 @@ Start with `sco` and `ioi`, then add the local areas the repeater genuinely cove
 7. Add the right regions from the table above.
 8. Set flood adverts to 24 hours.
 9. Deny wildcard forwarding.
-10. Save the region configuration.
+10. Set `region default sco`.
+11. Save the region configuration.
 
 ## Simple command examples
 
@@ -96,8 +98,13 @@ region denyf *
 
 set flood.advert.interval 24
 
+region default sco
+
 region save
 ```
+
+> Without `region default sco`, your repeater's adverts are sent unscoped. The Scottish network denies unscoped forwarding (`region denyf *`), so other repeaters will reject those adverts and will not know your repeater is there.
+{.is-warning}
 
 ### Fife repeater
 
@@ -115,6 +122,8 @@ region allowf fif
 region denyf *
 
 set flood.advert.interval 24
+
+region default sco
 
 region save
 ```
@@ -138,6 +147,8 @@ region denyf *
 
 set flood.advert.interval 24
 
+region default sco
+
 region save
 ```
 
@@ -149,6 +160,7 @@ region save
 - Give the repeater a name people can recognise.
 - Add only the regions it genuinely serves.
 - Use `region denyf *`; do not allow wildcard forwarding.
+- Set `region default sco` so your adverts are accepted by the rest of the mesh.
 - Set flood adverts to 24 hours.
 - Ask the community before inventing new region codes.
 
@@ -168,5 +180,6 @@ region save
 | `region allowf sco` | Allow scoped flood traffic for `sco`. |
 | `region denyf *` | Deny unscoped wildcard forwarding. |
 | `set flood.advert.interval 24` | Set flood adverts to 24 hours. |
+| `region default sco` | Set the default scope so adverts from this repeater are scoped to `sco` and accepted by the mesh. |
 | `region save` | Save the region configuration. |
 {.dense}

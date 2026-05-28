@@ -325,11 +325,16 @@ region denyf *
 region save
 ```
 
-On firmware that supports default scope, repeater and room server administrators may also set the default scope for packets that originate from that node:
+On firmware that supports default scope, repeater and room server administrators should also set the default scope for packets that originate from that node:
 
 ```text
 region default sco
 ```
+
+> **Set `region default sco` on your repeater.**
+>
+> Without a default scope, adverts sent by your repeater go out unscoped. Because the Scottish network uses `region denyf *`, other repeaters will reject those unscoped adverts and will never learn your repeater exists. Setting the default scope to `sco` ensures your adverts are carried normally across the mesh.
+{.is-warning}
 
 This is separate from flood forwarding permissions. For more detail, see [Default Scope Region](https://blog.meshcore.io/2026/04/17/default-scope).
 
