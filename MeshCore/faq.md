@@ -1,11 +1,11 @@
 ---
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
-published: true
-date: 2026-05-18T23:56:00.000Z
+published: false
+date: 2026-05-28T14:31:20.018Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
-dateCreated: 2026-05-18T23:56:00.000Z
+dateCreated: 2026-05-28T13:04:10.517Z
 ---
 
 # MeshCore FAQ 🙋
