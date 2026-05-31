@@ -2,7 +2,7 @@
 title: MeshCore
 description: Introduction to MeshCore in the Scottish Mesh community.
 published: true
-date: 2026-05-31T18:04:43.275Z
+date: 2026-05-31T18:09:17.572Z
 tags: meshcore, scotland
 editor: markdown
 dateCreated: 2026-04-24T13:26:05.328Z
@@ -25,7 +25,7 @@ ScotMesh has both Meshtastic and  MeshCore — radio messaging systems for small
 
 ## 👋 New to ScotMesh?
 
-- [Getting Started](/meshcore/getting-started) — what it is, what you need, your first message.
+- [Getting Started](https://wiki.scotmesh.uk/en/MeshCore/getting-started) — what it is, what you need, your first message.
 - [Scopes](/meshcore/scopes) — the one setting that matters most.
 - [Channels](/meshcore/channels) — where to talk and what scope to use.
 - [FAQ](/meshcore/faq) — quick answers to common questions.
