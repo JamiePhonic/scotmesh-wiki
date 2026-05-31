@@ -2,7 +2,7 @@
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
 published: false
-date: 2026-05-31T17:24:00.475Z
+date: 2026-05-31T17:52:56.790Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
 dateCreated: 2026-05-28T13:04:14.267Z
@@ -89,102 +89,77 @@ After flashing, reboot the device and confirm the firmware version before contin
 ## ⚙️ 3. The companion node settings
 
 
-> For this setting, understanding the regional framework is important because it defines how traffic is organised and routed across the mesh. Regions (set on repeater nodes) allow the wider mesh to be split into sensible geographic areas, helping messages, adverts, and repeater traffic stay relevant to the area they are intended for while still allowing agreed neighbouring regions to interconnect where required. Setting the **default scope** tells the node which region it should use automatically when sending or repeating traffic that does not already have a specific scope applied. In practice, this helps keep local traffic local, reduces unnecessary flooding across unrelated areas, and improves the reliability and manageability of the mesh.
+> For these settings, understanding the regional framework is important because it defines how traffic is organised and routed across the mesh. Regions (set on repeater nodes) allow the wider mesh to be split into sensible geographic areas, helping messages, adverts, and repeater traffic stay relevant to the area they are intended for while still allowing agreed neighbouring regions to interconnect where required. Setting the **default scope** tells the node which region it should use automatically when sending or repeating traffic that does not already have a specific scope applied. In practice, this helps keep local traffic local, reduces unnecessary flooding across unrelated areas, and improves the reliability and manageability of the mesh.
 
 
 Before you can send anything from your companion app, you need to set it up for use in the ScotMesh MC mesh.
 
-## ScotMesh CLI Settings (example location Falkirk)
+
+## Connecting a Newly Flashed Companion Node to ScotMesh
+
+After flashing the latest companion-node firmware, use the **MeshCore app** to connect to the node by Bluetooth and configure it for ScotMesh.
+
+1. Power on the newly flashed companion node.
+
+2. Open the **MeshCore app** on your phone.
+
+3. Make sure Bluetooth is enabled on your phone.
+
+4. In the MeshCore app, go to the Bluetooth connection screen.
+
+5. Scan for nearby Bluetooth MeshCore devices.
+
+6. Select your newly flashed companion node from the list.
+
+7. Wait for the app to connect to the node.
+
+8. Confirm the node shows as connected in the MeshCore app.
+
+9. Check the firmware version shown in the app and confirm it is the latest correct firmware for your device.
+
+10. Give the node a clear and recognisable name so other ScotMesh users can identify it.
+
+11. Open the node settings in the MeshCore app.
+
+12. Set the LoRa/radio region to the correct UK/EU setting.
+
+13. Open **Experimental Settings** and set the following:
+
+    - **Default Scope:** `sco`
+    - **Default Hash Size:** `3 byte`
+
+14. Save or apply the settings.
+
+15. Reboot the companion node if the app asks you to do so.
+
+16. Reconnect to the companion node by Bluetooth after it restarts.
+
+17. Confirm the **Default Scope** is still set to `sco`.
+
+18. Confirm the **Default Hash Size** is still set to `3 byte`.
+
+19. Open the ScotMesh public channel.
+
+20. Send a short test message, for example:
+
+    `Test from newly configured ScotMesh companion node`
+
+21. Confirm that the message sends successfully.
+
+Once these steps are complete, the companion node should be connected to ScotMesh and ready to send messages using the Scottish default scope.
 
 
-1. Check the current firmware version first. The node should be running firmware that supports regional scope/default scope.
 
-   Command: `ver`
 
-2. Check the current region list before making changes.
-
-   Command: `region`
-
-3. Add the Scotland top-level region.
-
-   Command: `region put sco`
-
-4. Add the Central Scotland region under Scotland.
-
-   Command: `region put cen sco`
-
-5. Add the Falkirk area region under Central Scotland.
-
-   Command: `region put fal cen`
-
-6. Add the neighbouring Island of Ireland region.
-
-   Command: `region put ioi`
-
-7. Allow flood traffic for the Scotland region.
-
-   Command: `region allowf sco`
-
-8. Allow flood traffic for the Central Scotland region.
-
-   Command: `region allowf cen`
-
-9. Allow flood traffic for the Falkirk area region.
-
-   Command: `region allowf fal`
-
-10. Allow flood traffic for the neighbouring Island of Ireland region, where required.
-
-    Command: `region allowf ioi`
-
-11. Deny wildcard flooding so unscoped/default legacy traffic is not flooded unnecessarily.
-
-    Command: `region denyf *`
-
-12. Set the companion node default scope to Scotland.
-
-    Command: `region default sco`
-
-13. Check that the default scope has been applied correctly.
-
-    Command: `region default`
-
-14. Check the final region configuration.
-
-    Command: `region list`
-
-15. Save the settings to the node.
-
-    Command: `save`
-
-16. Reboot the companion node.
-
-    Command: `reboot`
-
-17. After rebooting, check the firmware version again.
-
-    Command: `ver`
-
-18. Confirm the default scope is still set to Scotland.
-
-    Command: `region default`
-
-19. Confirm the regional framework is still present.
-
-    Command: `region`
-
-20. Send a test message and confirm it is being sent using the correct ScotMesh scope.
-
-> This is the most important setting on ScotMesh. Without it, your messages may not travel anywhere useful on our network.
+> The default scope is the most important setting on ScotMesh. Without it, your messages may not travel anywhere useful on our network.
 {.is-warning}
 
 
-> Lots more settings to be enetered before we get to sending messgae stage e.g.  EU/UK narrow, path hash, etc etc.    if this is to flow logical as a set up guide for companion nodes we need it to flow correctly
-> 
 
 
 
-## 💬 4. Send your first message
+
+## 💬 4. Send your first message in the #scotland channel.
 
 1. In the app, open or create a channel called `#scotland`.
 2. Check the channel scope is set to `sco`. If the app shows a scope option, make sure it says `sco`.
@@ -196,9 +171,9 @@ That is all you need to do. If there is a repeater nearby, your message should t
 
 Do not worry — this is normal at first.
 
-- **Check your scope.** Go back to step 3 and confirm `sco` is set as the default and on the `#scotland` channel.
-- ~~**Check repeater coverage.** Have a look at the [MeshCore Node Map](https://map.meshcore.io/) to see if there are any repeaters near you.~~
-> The web map is inacureate and alway out of date. THe companion app map will be empty until it hears adverts. the only way to reliably check for rpeaters is to use the repeater search tool in the companion app
+- **Check your scope.** Go back to step 2 and confirm `sco` is set as the default and on the `#scotland` channel.
+- **Check repeater coverage.** It is best **NOT TO USE** [MeshCore Node Map](https://map.meshcore.io/) to see if there are any repeaters near you. It is not up to date and can give false promise of coverage. Use the discover nearby nodes Scanner in the Meshcore app tools.
+> The web map is inaccurate and alway out of date. THe companion app map will be empty until it hears adverts. the only way to reliably check for rpeaters is to use the repeater search tool in the companion app
 - **Try `#test`.** Send a message in a channel called `#test` with scope `sco` — this is what the community uses for testing. If someone else is active they may respond.
 - **Ask for help.** The [Discord](https://discord.gg/invite/VvagXJn7Bq) is friendly and someone will help you work out what is happening.
 
