@@ -1,8 +1,8 @@
 ---
 title: MeshCore
 description: Introduction to MeshCore in the Scottish Mesh community.
-published: false
-date: 2026-05-31T18:04:19.360Z
+published: true
+date: 2026-05-31T18:04:43.275Z
 tags: meshcore, scotland
 editor: markdown
 dateCreated: 2026-04-24T13:26:05.328Z
