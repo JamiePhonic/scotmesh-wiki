@@ -2,7 +2,7 @@
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
 published: false
-date: 2026-05-31T17:55:01.390Z
+date: 2026-05-31T17:57:26.707Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
 dateCreated: 2026-05-28T13:04:14.267Z
@@ -173,7 +173,7 @@ Do not worry — this is normal at first.
 
 - **Check your scope.** Go back to step 2 and confirm `sco` is set as the default and on the `#scotland` channel.
 - **Check repeater coverage.** It is best **NOT TO USE** [MeshCore Node Map](https://map.meshcore.io/) to see if there are any repeaters near you. It is not up to date and can give false promise of coverage. Use the discover nearby nodes Scanner in the Meshcore app tools.
-> The web map is inaccurate and alway out of date. THe companion app map will be empty until it hears adverts. the only way to reliably check for rpeaters is to use the repeater search tool in the companion app
+> The web map is inaccurate and alway out of date. The companion app map will be empty until it hears adverts. the only way to reliably check for repeaters is to use the repeater search tool in the companion app
 - **Try `#test`.** Send a message in a channel called `#test` with scope `sco` — this is what the community uses for testing. If someone else is active they may respond.
 - **Ask for help.** The [Discord](https://discord.gg/invite/VvagXJn7Bq) is friendly and someone will help you work out what is happening.
 
