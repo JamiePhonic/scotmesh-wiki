@@ -2,7 +2,7 @@
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
 published: false
-date: 2026-05-28T14:31:20.018Z
+date: 2026-05-31T18:58:55.218Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
 dateCreated: 2026-05-28T13:04:10.517Z
@@ -14,7 +14,7 @@ Quick answers to the questions that come up most often. If yours is not here, as
 
 ---
 
-## Do I need a radio licence to use ScotMesh?
+## Do I need a radio licence to use meshcore?
 
 No. MeshCore uses licence-exempt LoRa frequencies (868 MHz in the UK). Anyone can carry a companion node and use the app. No amateur radio licence required.
 
@@ -24,7 +24,9 @@ No. MeshCore uses licence-exempt LoRa frequencies (868 MHz in the UK). Anyone ca
 
 It depends heavily on where you are and whether there is a repeater nearby. A companion node in the open might reach a couple of kilometres to a nearby repeater. A well-sited repeater on a hill can cover tens of kilometres. In a city with buildings in the way, range is shorter.
 
-The [MeshCore Node Map](https://map.meshcore.io/) shows where ScotMesh repeaters are — check there to see if you have coverage near you.
+Currently our distance record across water is **160km from Galloway to Dublin.** 
+
+Our record across land is **120km from Angus down to SOuth Lanark.**
 
 ---
 
@@ -33,7 +35,8 @@ The [MeshCore Node Map](https://map.meshcore.io/) shows where ScotMesh repeaters
 A few things to check, in order:
 
 1. **Scope is wrong.** The most common cause. Go to **Experimental Settings** in the app and confirm **Default Scope Region** is set to `sco`. Then check the channel scope too — see [Scopes](/meshcore/scopes).
-2. **No repeater nearby.** Check the [MeshCore Node Map](https://map.meshcore.io/) to see if there is a repeater in your area.
+2. **No repeater nearby.** Use **Tools → Repeater Scanner** in the MeshCore app to scan for nearby ScotMesh repeaters, then wait for the scan to complete and confirm that local repeaters are being discovered.
+
 3. **Wrong radio preset.** Make sure your device is flashed with the **EU/UK (Narrow)** preset. A device on the wrong channel or spreading factor will not hear anything.
 4. **Device not transmitting.** Try `#test` with scope `sco` — you should at least see your own message go out.
 
@@ -53,6 +56,9 @@ You can send a message on `#glasgow` with the scope set to `sco` and it will go 
 ## Why is the `*` wildcard not allowed?
 
 The `*` wildcard tells repeaters to forward everything to everyone. On a well-grown network that floods the airtime with traffic that most people do not need. ScotMesh uses deliberate region scopes instead — set `sco` for Scotland-wide, `gla` for Glasgow, and so on — so traffic only travels where it is actually useful.
+
+> In late March / early April 2026, the ScotMesh MC network officially formed when West Coast repeaters successfully linked with East Coast repeaters. This gave us around two weeks of reliable country-wide messaging across Scotland, proving that the network could work well as a connected Scottish mesh.The situation changed when our Galloway repeater linked us into Ireland and, through that path, to the remainder of the wider UK mesh. While wider interconnection may sound positive, in practice it created a major problem for ScotMesh. The network was suddenly exposed to a very high level of uncontrolled flood traffic, estimated at around 24,000 flood packets per day, plus around 600 public messages being present. Much of this traffic was unnecessary for Scottish users and included political arguments, off-topic content, and various abusive or inappropriate remarks.
+This level of uncontrolled traffic had a damaging effect on ScotMesh. It increased congestion, reduced the reliability of useful local messaging, and made the network harder to manage. This was the reason ScotMesh moved towards a clearer regional framework, allowing Scotland to remain connected where appropriate while keeping routine traffic scoped, relevant, and manageable. This is also the reason why are unlikely to ever allow wildcard flooding again.
 
 There is one exception: `*` is used as a root parent in repeater configuration commands (for example `region put sco *`). That is a region tree concept, not wildcard forwarding. See [Regions](/meshcore/regions) for the detail.
 
@@ -78,7 +84,8 @@ The best thing to do is ask on [Discord](https://discord.gg/invite/VvagXJn7Bq) �
 
 Send a message on `#test` with scope `sco`. If you can see the message appear in the app after sending, the device is transmitting. If someone else on the network responds, you have confirmed two-way comms.
 
-You can also check the [MeshCore Node Map](https://map.meshcore.io/) — if your node has an observer uplink configured, it should appear there.
+Use **Tools → Repeater Scanner** in the MeshCore app to scan for nearby ScotMesh repeaters, then wait for the scan to complete and confirm that local repeaters are being discovered.
+
 
 ---
 
