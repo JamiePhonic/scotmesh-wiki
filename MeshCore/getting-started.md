@@ -2,7 +2,7 @@
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
 published: false
-date: 2026-05-31T17:52:56.790Z
+date: 2026-05-31T17:55:01.390Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
 dateCreated: 2026-05-28T13:04:14.267Z
