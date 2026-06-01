@@ -2,7 +2,7 @@
 title: MeshCore
 description: Introduction to MeshCore in the Scottish Mesh community.
 published: true
-date: 2026-05-31T18:09:17.572Z
+date: 2026-06-01T14:46:55.434Z
 tags: meshcore, scotland
 editor: markdown
 dateCreated: 2026-04-24T13:26:05.328Z
@@ -25,16 +25,16 @@ ScotMesh has both Meshtastic and  MeshCore — radio messaging systems for small
 
 ## 👋 New to ScotMesh?
 
-- [Getting Started](https://wiki.scotmesh.uk/en/MeshCore/getting-started) — what it is, what you need, your first message.
-- [Scopes](/meshcore/scopes) — the one setting that matters most.
-- [Channels](/meshcore/channels) — where to talk and what scope to use.
-- [FAQ](/meshcore/faq) — quick answers to common questions.
+- [Getting Started](/MeshCore/getting-started) — what it is, what you need, your first message.
+- [Scopes](/MeshCore/scopes) — the one setting that matters most.
+- [Channels](/MeshCore/channels) — where to talk and what scope to use.
+- [FAQ](/MeshCore/faq) — quick answers to common questions.
 
 ## 📡 Setting up a repeater?
 
-- [Repeater Quick Setup](/meshcore/repeater-quick-setup) — start here for hardware and commands.
-- [Regions](/meshcore/regions) — full region code reference and configuration policy.
-- [Observers](/meshcore/observers) — MQTT map uplink setup.
+- [Repeater Quick Setup](/MeshCore/repeater-quick-setup) — start here for hardware and commands.
+- [Regions](/MeshCore/regions) — full region code reference and configuration policy.
+- [Observers](/MeshCore/observers) — MQTT map uplink setup.
 
 ## 🔧 Interested in the technical detail?
 
