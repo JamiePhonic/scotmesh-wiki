@@ -2,7 +2,7 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-05-28T15:01:35.550Z
+date: 2026-06-01T13:19:25.128Z
 tags: meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:23.987Z
@@ -12,33 +12,33 @@ dateCreated: 2026-05-28T13:04:23.987Z
 
 ---
 
-### NOTE - A Regional Framework was impelemented in the ScotMesh Meshcore Mesh at the beginning of April 2026. This was out of sheer necessity as our mesh was dying under the flood traffic from England (24,000 flood packets & 600+ messages daily). This saved our mesh from descending into a chaotic, unusable mess of incoherent rambles and frustrated messgaing failures. This is why an understaning of regions is imperative to understanding where we are today 
+> ### NOTE - A Regional Framework was impelemented in the ScotMesh Meshcore Mesh at the beginning of April 2026. This was out of sheer necessity as our mesh was dying under the flood traffic from England (24,000 flood packets & 600+ messages daily). This saved our mesh from descending into a chaotic, unusable mess of incoherent rambles and frustrated messaging failures. This is why an understaning of regions is imperative to understanding where we are today 
 
 
 ---
 
 
-This guide is for **repeater owners and network planners**. If you are a Companion App user looking to set your scope, see [Scopes](/meshcore/scopes) instead.
+This guide is for **repeater owners**. 
 
-The aim is simple: keep the scheme readable, predictable, and ~~useful~~ usable as the network grows.
+The aim is simple: keep the scheme readable, predictable, and usable as the network grows.
 
 ## Why regions are needed
 
-MeshCore messages can travel through repeaters. That is useful, but if every repeater carries every message everywhere, the network becomes noisy ~~and~~, inefficient and flooded with uneccessary traffic.
+MeshCore messages travel through repeaters for onward routing. Whilst this is the core function, if every repeater carries every message everywhere, the network becomes noisy, inefficient and flooded with uneccessary traffic.
 
 Regions help us:
 
 1. **Keep local traffic local**  
-   A message that only matters in one area does not always need to be repeated across every part of Scotland.
+   In the future, a message that only matters in one area wont always need to be repeated across every part of Scotland.
 
 2. **Reduce unnecessary radio traffic**  
-   LoRa is slow compared with Wi-Fi or mobile data, so every avoidable repeat uses valuable airtime.
+   LoRa is subject to a finite airtime cycle per hour (compared with Wi-Fi or mobile data), so every avoidable repeat uses valuable airtime.
 
 3. **Improve reliability**  
    Less unnecessary repeating leaves more room for useful messages.
 
 4. **Make planning clearer**  
-   Region codes make repeaters easier to discuss, map, filter, and maintain.
+   Regions make repeater deployment easier to map, identify needs, plan future expansion  and ease of ongoing mesh maintenance.
 
 5. **Support controlled peering**  
    Strategic repeaters can deliberately carry neighbouring traffic, such as the **IOI peering agreement** between Scotland and the Island of Ireland.
@@ -49,13 +49,13 @@ There are two related concepts: **regions** and **scopes**.
 
 | Term | Meaning | Example |
 |---|---|---|
-| **Region** | A ~~code~~ label configured on a repeater to describe the area it serves. | An Edinburgh-area repeater includes `edi`. |
-| **Scope** | A ~~code~~ label applied to messages or channels to describe which area (or region) the traffic is intended to travel. | The `#glasgow` channel might use `gla` when traffic should stay in that area. |
+| **Region** | A  label configured on a repeater to describe the area it serves. | An Edinburgh-area repeater includes `edi`. |
+| **Scope** | A  label applied to messages or channels to describe which area (or region) the traffic is intended to travel. | The `#glasgow` channel might use `gla` when traffic should stay in that area. |
 {.dense}
 
-A repeater should only carry scoped traffic for regions it genuinely serves.
+In a densely populated mesh, a repeater should only carry scoped traffic for regions it genuinely serves.  In new or embryonic meshes, this requirment will be a future need but best practise planning mandates introducing regions as early as is practical.
 
-## Wildcard forwarding is not allowed
+## Wildcard forwarding is not allowed (see info box at top of this document for context).
 
 The wildcard marker is:
 
@@ -63,9 +63,9 @@ The wildcard marker is:
 *
 ```
 
-> The important rule is: `*` may appear as a root parent in the region tree, but wildcard forwarding must be denied.
+> The important rule is: `*` will appear as a root parent in the region tree, but wildcard forwarding must be denied.
 >
-> In other words, `region put sco *` can be correct, but `region allowf *` is not suitable for the Scottish setup.
+> In other words, `region put sco *` is  correct, but must be preceeded by `region denyf *` .
 {.is-warning}
 
 The Scottish MeshCore setup does not allow wildcard forwarding. Repeater owners must deny wildcard forwarding with:
@@ -74,23 +74,18 @@ The Scottish MeshCore setup does not allow wildcard forwarding. Repeater owners 
 region denyf *
 ```
 
-You may still see `*` used as the root parent when defining the region tree, for example `region put sco *`. That is different from allowing wildcard forwarding.
+You may still see `*` as the root parent when defining the region tree, for example `region put sco *`. That is different from allowing wildcard forwarding.
 
-For channel names and suggested scopes, see [Channels](/meshcore/channels). For **MQTT observer** setup and uplink to the live map, see [Observers](/meshcore/observers).
+For channel names and suggested scopes, see [Channels](/meshcore/channels). 
 
 ## Scottish region code approach
 
 For Scotland, we use simple three-letter lowercase codes.
 
-We are deliberately not using long prefixed names such as:
+We are not part of any UK wide mesh (for context see comment box at the top of this documnet) Therefore, **we are not using any long prefixed names**
 
-```text
-gb-sco
-gb-cen
-sco-fal
-```
 
-Instead, we use short codes such as:
+We use short codes such as:
 
 ```text
 sco
@@ -98,11 +93,10 @@ cen
 fal
 ```
 
-Other countries and communities may use ISO-style hierarchical codes. That is a valid approach elsewhere, but the Scottish convention is designed to be short and easy to read in apps, analyser tools, and community discussions.
+Other countries and communities may use ISO-style hierarchical codes. That is  valid for them, but the Scottish convention is designed to be short and easy to read in apps, analyser tools, and community discussions.
 
-The upstream MeshCore region filtering guidance explains that region names should be exact, unique within a mesh, and use lower case alphanumeric characters or hyphens. See [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering) for the MeshCore background.
 
-## Agreed region codes
+## Current (June 2026) Agreed region codes
 
 | Code | Area |
 |---|---|
@@ -120,11 +114,11 @@ The upstream MeshCore region filtering guidance explains that region names shoul
 
 ## IOI peering agreement
 
-The Scottish and Island of Ireland MeshCore communities maintain an **IOI peering agreement**: scoped traffic is carried on the other network only where **both** sides configure for it.
+The Scottish and Irish MeshCore communities maintain a **peering agreement**: scoped traffic is carried on the other network only where **both** sides configure for it.
 
 Under that agreement, Scottish repeaters add the `ioi` region alongside `sco` where the Scottish baseline applies, and Island of Ireland repeaters add `sco` alongside their own region codes in the same spirit. Messages with matching **scopes** can then move between the two networks predictably, without relying on wildcard forwarding. For example channel names and typical scopes, see [Channels](/meshcore/channels).
 
-The `ioi` code is ~~still~~ **not** a Scottish local region. It marks repeaters and traffic that deliberately participate in that peering.
+The `ioi` code is  **not** a Scottish local region. It marks repeaters and traffic that deliberately participate in that peering.
 
 Do not use:
 
@@ -142,7 +136,7 @@ ioi
 
 If another region wants to peer with Scotland in a similar way, they should already have the following in place:
 
-1. **Wildcard forwarding disallowed** on their repeaters (the same principle as the Scottish setup: deny wildcard forwarding with `region denyf *`; see [Wildcard forwarding is not allowed](#wildcard-forwarding-is-not-allowed)).
+1. **Wildcard flooding disallowed** on their repeaters (the same principle as the Scottish setup: deny wildcard forwarding with `region denyf *`; see [Wildcard forwarding is not allowed](#wildcard-forwarding-is-not-allowed)).
 2. **Appropriate regions on their repeaters** so traffic is not forwarded wider than intended, and Scottish repeaters are not flooded with scoped traffic they did not agree to carry.
 3. **Neighbouring Scotland in RF terms** so equipment can **directly** peer, rather than assuming long unofficial relay chains.
 
@@ -168,7 +162,7 @@ ioi
 In plain English:
 
 - `sco` is for Scotland-wide traffic.
-- `tay`, `cen`, and `fif` are ~~wider~~ Scottish sub regions.
+- `tay`, `cen`, and `fif` are Scottish sub regions.
 - `fal`, `edi`, `gla`, `dun`, and `per` are local areas.
 - `ioi` is for the Island of Ireland under the IOI peering agreement.
 
@@ -184,7 +178,7 @@ A Scottish repeater should normally be configured with:
 
 > Do not allow wildcard forwarding.
 >
-> In command examples, this means using `region denyf *` rather than `region allowf *`.
+> In command line interface (CLI) examples, this means using `region denyf *`
 {.is-warning}
 
 ### Falkirk / Central Scotland repeater
@@ -238,7 +232,7 @@ That keeps peering-capable forwarding available where the Scottish baseline is c
 
 ## Good practice for repeater owners
 
-Use lowercase region codes. Avoid mixed case such as `SCO`, `Cen`, or `FAL`.
+Use lowercase region codes. Do not use mixed case such as `SCO`, `Cen`, or `FAL`.
 
 Use agreed codes. For example, use `edi` for the Edinburgh area, not `edn`, `edinburgh`, or `gb-edi`.
 
