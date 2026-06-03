@@ -2,7 +2,7 @@
 title: MeshCore Scopes
 description: Companion App guidance for choosing and setting MeshCore region scope in Scotland.
 published: false
-date: 2026-06-03T14:23:26.891Z
+date: 2026-06-03T14:25:14.922Z
 tags: meshcore_app, meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:32.228Z
@@ -97,7 +97,6 @@ Menus vary by app version and platform; the usual flow is:
 
 Often the channel menu includes something like **Set Region Scope**, then you pick or type the code (for example `sco`, `edi`, or `ioi`).
 
-More on region filtering: [Region Filtering](https://blog.meshcore.io/2026/01/20/region-filtering).
 
 ## 💬 Examples
 
