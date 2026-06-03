@@ -2,7 +2,7 @@
 title: MeshCore Scopes
 description: Companion App guidance for choosing and setting MeshCore region scope in Scotland.
 published: false
-date: 2026-06-03T14:17:00.050Z
+date: 2026-06-03T14:23:26.891Z
 tags: meshcore_app, meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:32.228Z
@@ -42,13 +42,13 @@ edi = Edinburgh area (example local)
 ioi = Island of Ireland (IOI peering)
 ```
 
-A message scoped to `sco` is forwarded by repeaters that carry `sco`. A message scoped to `ioi` is forwarded by repeaters that carry `ioi`. If scope is missing or wrong for your path, the message may go nowhere useful.
+A message scoped to `sco` is forwarded by repeaters that carry `sco`as a region. A message scoped to `ioi` is forwarded by repeaters that carry `ioi`as a region. If scope is missing or wrong for your path, the message will go nowhere, it is dropped and ceases to exist.
 
 ## 🚫 Wildcard forwarding is not allowed
 
 The wildcard marker is `*`. Do not rely on it for routing — the Scottish MeshCore setup expects explicit region scopes.
 
-In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `gla`, `ioi`, and so on). On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in [Regions](/meshcore/regions).
+In the **Companion App**, your channel scope should always be a **real region code** (`sco`, `gla`, `ioi`, and so on). On **repeaters**, CLI examples sometimes show `*` as the **parent** in a region tree (for example `region put sco *`); that is a different idea from wildcard **forwarding** and is covered in https://wiki.scotmesh.uk/en/MeshCore/regions.
 
 ## 📋 Documented scope codes
 
@@ -61,6 +61,7 @@ In the **Companion App**, your channel scope should always be a **real region co
 | `gla` | Glasgow area |
 | `edi` | Edinburgh area |
 | `fal` | Falkirk area |
+| `sti` | Stirling area |
 | `per` | Perth area |
 | `dun` | Dundee area |
 | `ioi` | Island of Ireland / IOI peering |
@@ -68,11 +69,6 @@ In the **Companion App**, your channel scope should always be a **real region co
 
 For most day-to-day traffic in Scotland, **`sco`** is the right default. Use a **local** code when traffic should stay in that area, regardless of channel name.
 
-Do not use the old combined name:
-
-```text
-ioi-sco
-```
 
 ## ⚙️ Default scope and per-channel scope
 
