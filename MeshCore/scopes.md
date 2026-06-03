@@ -2,7 +2,7 @@
 title: MeshCore Scopes
 description: Companion App guidance for choosing and setting MeshCore region scope in Scotland.
 published: false
-date: 2026-05-28T14:34:21.963Z
+date: 2026-06-03T14:13:21.378Z
 tags: meshcore_app, meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:32.228Z
@@ -13,7 +13,7 @@ dateCreated: 2026-05-28T13:04:32.228Z
 > **Quick start for most users:** open the app, go to **Experimental Settings**, set **Default Scope Region** to `sco`. That is all you need for normal Scottish traffic.
 {.is-success}
 
-> **Watch out:** if you do not have a suitable **scope** set, repeaters on the Scottish MeshCore network may not forward your traffic. You can end up **shouting into the void**. Check your default scope and each channel's scope before you count on messages reaching anyone.
+> **Watch out:** if you do not have a suitable **scope** set, repeaters on the Scottish MeshCore network wont forward your traffic. You can end up **shouting into the void**. Check your default scope and each channel's scope before you count on messages reaching anyone.
 {.is-warning}
 
 Scope is the single setting that makes or breaks whether your messages go anywhere on ScotMesh. The channel name is for people — the scope is for the mesh. Set your **default** to `sco`, then adjust per channel when you need something narrower.
