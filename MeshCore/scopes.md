@@ -2,7 +2,7 @@
 title: MeshCore Scopes
 description: Companion App guidance for choosing and setting MeshCore region scope in Scotland.
 published: false
-date: 2026-06-03T14:15:21.931Z
+date: 2026-06-03T14:17:00.050Z
 tags: meshcore_app, meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:32.228Z
@@ -30,7 +30,7 @@ Without scope, repeaters have no way to know whether to carry your traffic. With
 - Reduce unnecessary flooding.
 - Keep the network easier to grow.
 
-For example channel names and typical scopes, see [https://wiki.scotmesh.uk/en/MeshCore/channels](/meshcore/channels). For repeater region codes, see [Regions](/meshcore/regions).
+For example channel names and typical scopes, see [https://wiki.scotmesh.uk/en/MeshCore/channels](/meshcore/channels). For repeater region codes, see [https://wiki.scotmesh.uk/en/MeshCore/regions.
 
 ## 🗺️ What region scope means
 
