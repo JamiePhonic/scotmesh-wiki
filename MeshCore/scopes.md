@@ -2,7 +2,7 @@
 title: MeshCore Scopes
 description: Companion App guidance for choosing and setting MeshCore region scope in Scotland.
 published: false
-date: 2026-06-03T14:25:14.922Z
+date: 2026-06-03T16:49:06.305Z
 tags: meshcore_app, meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:32.228Z
@@ -141,20 +141,18 @@ If you are unsure, **`sco`** is the safe general default for Scottish-side traff
 
 ## ❌ What to avoid
 
-- Sending important traffic with no region scope.
+- Sending traffic with no region scope.
 - Relying on wildcard forwarding.
 - Assuming the channel name alone chooses routing.
-- Using `ioi-sco`.
 
 ## 📝 Summary
 
 ```text
 Default: sco on ScotMesh
 Override per channel when needed
-#ireland: ioi OR sco — pick the path you mean
+#ireland: ioi OR sco
 Local: use the local code when traffic should stay local
-Never: scope * for forwarding, or ioi-sco
-Check scope before you send
+Check your companion app is scoped before you send your initial messages
 ```
 
-Getting scope right keeps the mesh predictable and easier to grow.
+Getting scope right keeps mesh traffic logical and the mesh relaible, easier to use and simpler to grow.
