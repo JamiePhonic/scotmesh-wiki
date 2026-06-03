@@ -2,7 +2,7 @@
 title: MeshCore Repeater Quick Setup
 description: A short ScotMesh guide for setting up a MeshCore repeater with the right region settings.
 published: false
-date: 2026-05-28T14:33:17.595Z
+date: 2026-06-03T14:10:21.570Z
 tags: meshcore, scotland, repeater
 editor: markdown
 dateCreated: 2026-05-28T13:04:28.236Z
@@ -73,7 +73,7 @@ Start with `sco` and `ioi`, then add the local areas the repeater genuinely cove
 2. Select your device.
 3. Choose the repeater role.
 4. Use the EU/UK (Narrow) preset.
-5. Flash the device.
+5. Flash the device with the latest stable firmware
 6. Set a clear repeater name.
 7. Add the right regions from the table above.
 8. Set flood adverts to 24 hours.
