@@ -2,7 +2,7 @@
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
 published: true
-date: 2026-06-08T07:59:14.928Z
+date: 2026-06-08T08:01:43.309Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
 dateCreated: 2026-05-28T13:04:10.517Z
@@ -97,7 +97,7 @@ Not necessarily. If you set a **default scope** of `sco` in Experimental Setting
 
 ## What is the Island of Ireland (`ioi`) scope?
 
-ScotMesh and the Irish MeshCore community have a peering agreement. Repeaters on both sides carry the `ioi` scope so that traffic can move between the two networks in a controlled way — without flooding everything. You can join `#ireland` and set scope to `ioi` to talk on that path. See [Channels](/meshcore/channels) for more.
+ScotMesh and the Irish MeshCore community have a peering agreement. Repeaters on both sides carry the `ioi` scope so that traffic can move between the two networks in a controlled way — without flooding everything. You can join `#ireland` and set scope to `ioi` to talk on that path. See [Channels](https://wiki.scotmesh.uk/en/MeshCore/channels) for more.
 
 ---
 
