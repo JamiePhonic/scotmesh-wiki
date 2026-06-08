@@ -2,7 +2,7 @@
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
 published: true
-date: 2026-06-08T07:54:10.307Z
+date: 2026-06-08T07:55:01.671Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
 dateCreated: 2026-05-28T13:04:10.517Z
@@ -49,7 +49,7 @@ If you have checked all of the above and still hear nothing, ask on [Discord](ht
 - A **channel** is a named group chat — `#scotland`, `#glasgow`, `#test`. It is just a label for people.
 - A **scope** is a region code that repeaters use to decide whether to carry your message — `sco`, `gla`, `edi`.
 
-You can send a message on `#glasgow` with the scope set to `sco` and it will go Scotland-wide. Or you can set the scope to `gla` and it will only travel through Glasgow-area repeaters. The channel name does not change that — the scope does. See [Scopes](/meshcore/scopes) for the full explanation.
+You can send a message on `#glasgow` with the scope set to `sco` and it will go Scotland-wide. Or you can set the scope to `gla` and it will only travel through Glasgow-area repeaters. The channel name does not change that — the scope does. See [Scopes](https://wiki.scotmesh.uk/en/MeshCore/scopes) for the full explanation.
 
 ---
 
@@ -91,7 +91,7 @@ Use **Tools → Repeater Scanner** in the MeshCore app to scan for nearby ScotMe
 
 ## Do I need to set scope for every channel separately?
 
-Not necessarily. If you set a **default scope** of `sco` in Experimental Settings, that applies to any channel that does not have its own scope override. You only need to set a per-channel scope when you want something different — for example `gla` on `#glasgow` to keep traffic local, or `ioi` on `#ireland` for the Island of Ireland path. See [Scopes](/meshcore/scopes) for the full detail.
+Not necessarily. If you set a **default scope** of `sco` in Experimental Settings, that applies to any channel that does not have its own scope override. You only need to set a per-channel scope when you want something different — for example `gla` on `#glasgow` to keep traffic local, or `ioi` on `#ireland` for the Island of Ireland path. See [Scopes](https://wiki.scotmesh.uk/en/MeshCore/scopes) for the full detail.
 
 ---
 
