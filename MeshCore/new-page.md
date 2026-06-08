@@ -2,7 +2,7 @@
 title: MeshMapper-Friendly Repeater Configuration Spec for Scotmesh MeshCore
 description: 
 published: true
-date: 2026-06-08T08:31:09.128Z
+date: 2026-06-08T08:31:58.243Z
 tags: 
 editor: markdown
 dateCreated: 2026-06-08T08:31:09.128Z
