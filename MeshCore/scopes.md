@@ -2,7 +2,7 @@
 title: MeshCore Scopes
 description: Companion App guidance for choosing and setting MeshCore region scope in Scotland.
 published: true
-date: 2026-06-08T08:16:15.018Z
+date: 2026-06-08T08:16:42.568Z
 tags: meshcore_app, meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:32.228Z
