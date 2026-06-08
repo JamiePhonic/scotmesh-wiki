@@ -2,7 +2,7 @@
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
 published: true
-date: 2026-06-08T07:55:01.671Z
+date: 2026-06-08T07:57:43.854Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
 dateCreated: 2026-05-28T13:04:10.517Z
@@ -60,7 +60,7 @@ The `*` wildcard tells repeaters to forward everything to everyone. On a well-gr
 > In late March / early April 2026, the ScotMesh MC network officially formed when West Coast repeaters successfully linked with East Coast repeaters. This gave us around two weeks of reliable country-wide messaging across Scotland, proving that the network could work well as a connected Scottish mesh.The situation changed when our Galloway repeater linked us into Ireland and, through that path, to the remainder of the wider UK mesh. While wider interconnection may sound positive, in practice it created a major problem for ScotMesh. The network was suddenly exposed to a very high level of uncontrolled flood traffic, estimated at around 24,000 flood packets per day, plus around 600 public messages being present. Much of this traffic was unnecessary for Scottish users and included political arguments, off-topic content, and various abusive or inappropriate remarks.
 This level of uncontrolled traffic had a damaging effect on ScotMesh. It increased congestion, reduced the reliability of useful local messaging, and made the network harder to manage. This was the reason ScotMesh moved towards a clearer regional framework, allowing Scotland to remain connected where appropriate while keeping routine traffic scoped, relevant, and manageable. This is also the reason why are unlikely to ever allow wildcard flooding again.
 
-There is one exception: `*` is used as a root parent in repeater configuration commands (for example `region put sco *`). That is a region tree concept, not wildcard forwarding. See [Regions](/meshcore/regions) for the detail.
+There is one exception: `*` is used as a root parent in repeater configuration commands (for example `region put sco *`). That is a region tree concept, not wildcard forwarding. See [Regions](https://wiki.scotmesh.uk/en/MeshCore/regions) for the detail.
 
 ---
 
