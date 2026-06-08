@@ -2,7 +2,7 @@
 title: Getting Started with ScotMesh
 description: A friendly beginner guide for new ScotMesh MeshCore users — from unboxing to sending your first message.
 published: true
-date: 2026-06-08T07:50:07.130Z
+date: 2026-06-08T07:51:15.594Z
 tags: meshcore, scotland, beginner, getting-started
 editor: markdown
 dateCreated: 2026-05-28T13:04:14.267Z
@@ -182,5 +182,5 @@ Do not worry — this is normal at first.
 Once you are up and running:
 
 - [Scopes](https://wiki.scotmesh.uk/en/MeshCore/scopes) explains what scope means and how to set it properly for different channels.
-- [Channels](/meshcore/channels) lists the agreed community channels and what scope to use with each.
+- [Channels](https://wiki.scotmesh.uk/en/MeshCore/channels) lists the agreed community channels and what scope to use with each.
 - [Repeater Quick Setup](https://wiki.scotmesh.uk/en/MeshCore/repeater-quick-setup) is for you if you want to set up a repeater and help the network grow.
