@@ -2,7 +2,7 @@
 title: MeshCore Repeater Quick Setup
 description: A short ScotMesh guide for setting up a MeshCore repeater with the right region settings.
 published: true
-date: 2026-06-03T14:10:40.503Z
+date: 2026-06-08T08:11:31.927Z
 tags: meshcore, scotland, repeater
 editor: markdown
 dateCreated: 2026-05-28T13:04:28.236Z
@@ -166,7 +166,7 @@ region save
 
 ## Where to go next
 
-- [Regions](/meshcore/regions) has the fuller region guide and more command examples.
+- [Regions](https://wiki.scotmesh.uk/en/MeshCore/regions) has the fuller region guide and more command examples.
 - [Scopes](/meshcore/scopes) explains what Companion App users need to set.
 - [Channels](/meshcore/channels) lists the agreed and proposed channels.
 - [MeshCore CLI Commands](https://docs.meshcore.io/cli_commands/) is the upstream command reference.
