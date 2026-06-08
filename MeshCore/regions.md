@@ -2,7 +2,7 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-06-01T13:19:25.128Z
+date: 2026-06-08T08:04:12.765Z
 tags: meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:23.987Z
@@ -76,7 +76,7 @@ region denyf *
 
 You may still see `*` as the root parent when defining the region tree, for example `region put sco *`. That is different from allowing wildcard forwarding.
 
-For channel names and suggested scopes, see [Channels](/meshcore/channels). 
+For channel names and suggested scopes, see [Channels](https://wiki.scotmesh.uk/en/MeshCore/channels). 
 
 ## Scottish region code approach
 
@@ -116,7 +116,7 @@ Other countries and communities may use ISO-style hierarchical codes. That is  v
 
 The Scottish and Irish MeshCore communities maintain a **peering agreement**: scoped traffic is carried on the other network only where **both** sides configure for it.
 
-Under that agreement, Scottish repeaters add the `ioi` region alongside `sco` where the Scottish baseline applies, and Island of Ireland repeaters add `sco` alongside their own region codes in the same spirit. Messages with matching **scopes** can then move between the two networks predictably, without relying on wildcard forwarding. For example channel names and typical scopes, see [Channels](/meshcore/channels).
+Under that agreement, Scottish repeaters add the `ioi` region alongside `sco` where the Scottish baseline applies, and Island of Ireland repeaters add `sco` alongside their own region codes in the same spirit. Messages with matching **scopes** can then move between the two networks predictably, without relying on wildcard forwarding. For example channel names and typical scopes, see [Channels](https://wiki.scotmesh.uk/en/MeshCore/channels).
 
 The `ioi` code is  **not** a Scottish local region. It marks repeaters and traffic that deliberately participate in that peering.
 
