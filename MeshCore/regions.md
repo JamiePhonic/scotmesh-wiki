@@ -2,7 +2,7 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-06-08T08:04:12.765Z
+date: 2026-06-08T08:06:43.592Z
 tags: meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:23.987Z
@@ -246,7 +246,7 @@ The exact method may vary depending on firmware version and whether you are usin
 
 > New to repeater setup?
 >
-> Start with [Repeater Quick Setup](/meshcore/repeater-quick-setup), then come back here for the fuller detail.
+> Start with [Repeater Quick Setup](https://wiki.scotmesh.uk/en/MeshCore/repeater-quick-setup), then come back here for the fuller detail.
 {.is-info}
 
 For a Central Scotland / Falkirk repeater, the setup may look conceptually like this:
