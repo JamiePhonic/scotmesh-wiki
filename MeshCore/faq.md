@@ -2,7 +2,7 @@
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
 published: true
-date: 2026-05-31T18:59:15.817Z
+date: 2026-06-08T07:54:10.307Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
 dateCreated: 2026-05-28T13:04:10.517Z
@@ -34,7 +34,7 @@ Our record across land is **120km from Angus down to SOuth Lanark.**
 
 A few things to check, in order:
 
-1. **Scope is wrong.** The most common cause. Go to **Experimental Settings** in the app and confirm **Default Scope Region** is set to `sco`. Then check the channel scope too — see [Scopes](/meshcore/scopes).
+1. **Scope is wrong.** The most common cause. Go to **Experimental Settings** in the app and confirm **Default Scope Region** is set to `sco`. Then check the channel scope too — see [Scopes](https://wiki.scotmesh.uk/en/MeshCore/scopes).
 2. **No repeater nearby.** Use **Tools → Repeater Scanner** in the MeshCore app to scan for nearby ScotMesh repeaters, then wait for the scan to complete and confirm that local repeaters are being discovered.
 
 3. **Wrong radio preset.** Make sure your device is flashed with the **EU/UK (Narrow)** preset. A device on the wrong channel or spreading factor will not hear anything.
