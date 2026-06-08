@@ -2,7 +2,7 @@
 title: MeshCore FAQ
 description: Frequently asked questions about ScotMesh and MeshCore.
 published: true
-date: 2026-06-08T07:57:43.854Z
+date: 2026-06-08T07:59:14.928Z
 tags: meshcore, scotland, faq, beginner
 editor: markdown
 dateCreated: 2026-05-28T13:04:10.517Z
@@ -68,7 +68,7 @@ There is one exception: `*` is used as a root parent in repeater configuration c
 
 Yes, but your range is very limited. Two companion nodes in line of sight can talk directly. If there is no repeater between you and another user, messages will only reach as far as direct radio range allows — often just a few hundred metres in built-up areas.
 
-If you want to extend coverage in your area, the best thing to do is put up a repeater. See [Repeater Quick Setup](/meshcore/repeater-quick-setup).
+If you want to extend coverage in your area, the best thing to do is put up a repeater. See [Repeater Quick Setup](https://wiki.scotmesh.uk/en/MeshCore/repeater-quick-setup).
 
 ---
 
