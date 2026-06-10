@@ -2,7 +2,7 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-06-08T08:06:43.592Z
+date: 2026-06-10T18:42:17.218Z
 tags: meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:23.987Z
@@ -109,6 +109,7 @@ Other countries and communities may use ISO-style hierarchical codes. That is  v
 | `fal` | Falkirk area |
 | `dun` | Dundee area |
 | `per` | Perth area |
+| `ang` | Angus area |
 | `ioi` | Island of Ireland (`ioi`) — IOI peering |
 {.dense}
 
