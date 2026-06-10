@@ -2,7 +2,7 @@
 title: MeshCore Regions
 description: Scotland region code and repeater guidance for the Scottish MeshCore network.
 published: true
-date: 2026-06-10T18:42:17.218Z
+date: 2026-06-10T18:44:55.321Z
 tags: meshcore, scotland, regions
 editor: markdown
 dateCreated: 2026-05-28T13:04:23.987Z
@@ -157,6 +157,7 @@ sco
   tay
     dun
     per
+    ang
 ioi
 ```
 
@@ -164,7 +165,7 @@ In plain English:
 
 - `sco` is for Scotland-wide traffic.
 - `tay`, `cen`, and `fif` are Scottish sub regions.
-- `fal`, `edi`, `gla`, `dun`, and `per` are local areas.
+- `fal`, `edi`, `gla`, `dun`, `per` and `ang` are local areas.
 - `ioi` is for the Island of Ireland under the IOI peering agreement.
 
 ## Suggested repeater configuration policy
