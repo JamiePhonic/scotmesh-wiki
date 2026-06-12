@@ -2,7 +2,7 @@
 title: Upgrading MeshCore Repeaters Using OTA
 description: Instructions for proximity updating firmwar
 published: true
-date: 2026-06-12T17:59:08.331Z
+date: 2026-06-12T18:00:26.272Z
 tags: meshcore, firmware
 editor: markdown
 dateCreated: 2026-06-12T16:47:05.172Z
