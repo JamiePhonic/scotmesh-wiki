@@ -2,7 +2,7 @@
 title: Upgrading MeshCore Repeaters Using OTA
 description: Instructions for proximity updating firmwar
 published: true
-date: 2026-06-12T16:47:05.172Z
+date: 2026-06-12T17:59:08.331Z
 tags: meshcore, firmware
 editor: markdown
 dateCreated: 2026-06-12T16:47:05.172Z
@@ -127,6 +127,17 @@ In the MeshCore command line, enter:
 
 ```text
 start ota
+```
+
+The device should reply:
+
+```text
+OK
+```
+
+The repeater is now in OTA / DFU mode.
+
+Leave the repeater powered on and do not restart it while you move to the DFU app.
 
 ## Step 4 — Configure the DFU app
 
